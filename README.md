@@ -4,7 +4,7 @@ Each student :
 <ul>
  <li>Create your own folder ./{NameOrNickname}</li>
  <li>Commend code or line if you need help.</li>
- <li>Remember to push your commit to git server EVERYTIME you get a session done.</li>
+ <li>emember to push your commit to git server EVERYTIME you get a session done.</li>
  </ul>
 </p>
 
