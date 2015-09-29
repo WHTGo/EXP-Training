@@ -1,0 +1,152 @@
+
+
+body{
+	background: url(images/bg.jpg);
+	margin: 0px;
+	line-height: 1.5em;
+}
+#wrapper{
+	margin: auto;
+	background-color: white;
+	background-image: url("images/bg_rgt.jpg"), url("images/bg_lft.jpg");
+	background-position: right 0px, left 0px;
+	background-repeat: repeat-y, repeat-y;
+	width: 785px;
+	height: 777px;
+	padding-right: 35px;
+	padding-left: 35px;
+}
+#header{
+	width: 785px;
+	height:253px ;
+}
+#top{
+	width: 785px;
+	height: 60px;
+}
+#top img{
+	float: right;
+	padding-top: 30px;
+}
+#menu{
+	width: 785px;
+	height: 35px;
+}
+#menu img{
+	float: left;
+}
+#search{
+	background-image: url(images/back_for_search.jpg);
+	width: 785px;
+	height: 42px;
+}
+#search img{
+	float: left;
+	margin-top: 13px;
+	margin-left: 114px; 
+}
+#search input{
+	float: left;
+	margin-left: 32px;
+	margin-top: 14px;
+	margin-bottom: 2px;
+	height: 18px;
+	width: 120px;
+}
+#search button{
+	float: left;
+	background: url("images/go_but.gif");
+	margin-left: 0px;
+	margin-top: 14px;
+	margin-bottom: 2px; 
+	width: 18px;
+	height: 18px;
+	border: 0;
+}
+#welcome {
+	width: 785px;
+	height: 118px;
+}
+#welcome img{
+	float: left;
+}
+#contents{
+	width: 785px;
+	height: 422px;
+	margin: 0px;
+}
+#primary{
+	float: left;
+	width: 563px;
+	height: 422px;
+}
+#comp_text-1{
+	
+	width: 567px;
+	height: 224px;
+}
+#comp_text-1 p{
+	margin: 11px 0px 0px 30px;
+}
+#comp_text-1 img{
+	float: top;
+}
+#comp_text-2{
+	background-image: url("images/back_left.jpg");
+	width: 567px;
+	height: 197px;
+}
+#comp_text-2 img{
+	margin-left: 23px;
+	margin-right: 20px;
+	float: left;
+}
+#comp_text-2 p{
+	padding: 7px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+#sidebar{
+	float: left;
+	background-image: url("images/back_right.jpg");
+	width: 218px;
+	height: 422px;
+}
+#sidebar img{
+	float: top;
+}
+#sidebar p{
+	margin-right: 15px;
+	margin-left: 28px;
+	padding: 0px 10px;
+	color: white;
+}
+#footer{
+	width: 785px;
+	height: 86px;
+}
+#footer-left{
+	float: left;
+	width: 563px;
+	height: 87px;
+}
+#footer-left img{
+	float: left;
+}
+#footer-left h5{
+	 float: left;
+    padding-left: 65px;
+    margin-top: -9px;
+}
+#footer-left p{
+	float: right;
+	margin: 3px 130px 17px 32px;	
+}
+#footer-right{
+	float: left;
+	width: 218px;
+	height: 87px;
+}
+#footer-right img{
+	float: left;
+
+}
