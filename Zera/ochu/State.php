@@ -5,7 +5,7 @@
  * Date: 9/19/2015
  * Time: 5:01 PM
  */
-class State dsff
+class State
 {
     var $value;
 
