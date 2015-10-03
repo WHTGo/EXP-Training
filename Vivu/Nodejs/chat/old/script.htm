@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>Simple console demo by DUCK48CA</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+</head>
+<body style="font-family:Arial Tahoma Verdana">
+<br /><br /><br /><br /><br />
+<div id ="hehe">
+Thuy?t minh v? DConsole by Duck48ca s? t? d?ng ch?y bên du?i sau ít giây n?a.<br />
+(M?i bu?c ví d? s? di?n ra trong vòng 6 giây)
+</div>
+<script type="text/javascript">
+$console = {
+	dconsoleStyle: ";position:absolute;top:250px;left:20px;width:600px;height:260px;overflow:auto;background-color: #000000;color:#ffffff;font-size:12px;z-index: 900;",
+	dcmdboxStyle : ";z-index:999;height:70px;color:yellow;border:inset 2px gray;background:#131313;",
+	init: function() {
+		if (this.dconsole) return;
+		this.msg = new Array();
+		
+		var dconsole = document.createElement("textarea");
+		this.dconsole = dconsole;
+		dconsole.id = "_dconsole";
+		dconsole.style.cssText = this.dconsoleStyle;
+		
+		document.body.appendChild(dconsole);
+		dconsole.parent = this;
+		dconsole.ondblclick = function () {
+			this.parent.showCmdbox();
+		}
+		dconsole.onclick = function () {
+			if (this.parent.dcmdbox) 
+				this.parent.dcmdbox.style.display = "none";
+		}
+		this.writeln("----  You're using Javascript DConsole ----"+"\n(Double click to evaluate some expressions)");/**/
+	},
+	showCmdbox: function() {
+		var dcmdbox;
+		if (!this.dcmdbox) {
+			dcmdbox = this.dconsole.cloneNode(true);
+			this.dcmdbox = dcmdbox;
+			dcmdbox.id = "_dcmdbox";
+			dcmdbox.parent = this;
+			document.body.appendChild(dcmdbox);
+			dcmdbox.style.cssText += this.dcmdboxStyle;
+			dcmdbox.value = "Enter some expression to evaluate...";
+			
+			dcmdbox.ondblclick = function() {
+				this.parent.evalInput(this.value);
+			}
+			dcmdbox.onfocus = function() {
+				if (this.value.indexOf("Enter some")==0) this.value = "";
+			}
+		} 
+		else {
+			this.dcmdbox.style.display = "";
+		}
+	},
+	
+	evalInput: function(value) {
+		if (value != "")
+		try {
+			var displayVal = value.substr(0,30);
+			if (value.length > 30) 
+				displayVal += " ... ";
+			this.writeln("--- Evaluating: { " + displayVal +" } ---");
+			eval(value);
+			this.writeln("--- Evaluation completed! ---");
+		} catch(_e_$) {this.writeln("Error '"+_e_$.name+ "', "+_e_$.description+ " "+_e_$.message+ " ")}
+	},
+	
+	write: function(_msg) {
+		if (!this.dconsole) this.init();
+		this.msg.push(_msg)
+		this.dconsole.value = this.msg.join("");
+		this.dconsole.scrollTop = 1000000;
+	},
+	writeln: function(msg) {
+		this.write(msg + "\n")
+	},
+	flush: function() {
+		this.dconsole.value = "";
+		this.msg = new Array();
+	},
+	show: function(flag) {
+		if (!this.dconsole)
+			this.init();
+		this.dconsole.style.display = (flag== false)? "none" : "";
+	}
+}
+
+$console.init();
+$console.writeln("\n\n\n\n\n");
+
+var count = 0;
+var delay = 5500;
+var script = [
+	 ["B?n có th? tùy ch?n d? d?t l?i v? trí cho console này ? ch? mong mu?n. Vi?t message ra console này b?ng l?nh $console.write(msg) ho?c $console.writeln(msg)","",delay],
+	 ["B?n có th? click dúp vào màn hình console này d? hi?n command box\n","",delay],
+	 ["Gi? s? b?n v?a click dúp vào console --> command box hi?n ra. Gi? ta có th? nh?p mã JS vào r?i b?m dúp d? th?c thi, sau dó xem thông báo trên console\n","$console.showCmdbox()",delay],
+	 ["Gi? s? b?n nh?p m?t câu l?nh alert vào command box nhu trên...","$console.dcmdbox.value = 'alert(\"Nothing is impossible!\")'",delay],
+	 ["Sau khi click dúp vào commandbox, l?nh trong dó s? du?c th?c thi","$console.evalInput($console.dcmdbox.value)",Math.floor(delay/3)],
+	 ["B?n mu?n th? d?i màu text trong document body ch?? Hãy nh?p l?nh trong command box nhu trên...","$console.showCmdbox();$console.dcmdbox.value='alert(\"Changing text color...\");'; $console.dcmdbox.value += 'document.body.style.color=\"red\";'",delay+500],
+	 ["Click dúp vào commandbox, màu c?a do?n text trên dây s? thay d?i...","$console.evalInput($console.dcmdbox.value)",100],
+	 ["Bây gi?, b?n hãy b?m dúp lên console, nh?p bao nhiêu dòng l?nh tùy thích vào command box và th? nghi?m món d? choi nh? này nhé!","",0]
+]
+
+function run() {
+	if (count >= script.length) return;
+	$console.writeln("\n** MSG "+count+" **: "+ script[count][0]);
+	if (script[count][1]!="")
+		eval(script[count][1]);
+	count++;
+	setTimeout("run()",script[count-1][2]);
+}
+setTimeout("run()",6000);
+</script>
+</body>
+</html>
