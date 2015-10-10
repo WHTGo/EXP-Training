@@ -1,0 +1,56 @@
+html{min-height: 100%; min-width: 100%;}
+body {
+      text-shadow: 0 1px 0 #f3f3f3;
+  font-family: sans-serif;
+     background-color: #D2E8DC;
+	font: normal 18px Sniglet; color: white; text-align: center;}
+* {margin: 0; padding: 0;}
+.icode{background: hsl(120, 40%, 40%);height: 97px;top: 0px;margin: 0 auto;}
+
+
+#main{
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    min-width: 600px;
+    min-height: 668px;
+/*border:solid #ccc; */
+    background:  white;
+}
+.txtarea {
+  display: inline-block;
+  padding: 8px 11px;
+  padding-right: 30px;
+  width: 580px;
+  height: 220px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  color: #898989;
+  background-color: #f0f0f0;
+  background-position: 110% 4%;
+  background-repeat: no-repeat;
+ /* border: 1px solid #ccc; */
+ 
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+
+button {
+    width: 80px;
+    height: 35px;
+}
+#on p{
+    margin-bottom: 6px;
+}
+#tables{
+    margin: 10px auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+table.zebra-style {font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif; text-align:left;margin: auto; margin-bottom:10px;  margin-top: 10px; }
+table.zebra-style th { color: #fff; font-size: 14px; font-weight: normal; padding: 10px 8px; background:#666; }
+table.zebra-style td {color: #777;padding: 8px; font-size:13px;}
+table.zebra-style tr.odd {background:#f2f2f2;}

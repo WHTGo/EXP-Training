@@ -1,0 +1,82 @@
+<?php
+
+$db=mysqli_connect("localhost","root","","DB_thaoluan");
+if (isset($_COOKIE['id'])){
+        $id_old=$_COOKIE['id'];
+        $pass=$_COOKIE['pass'];
+        mysqli_query($db,"update id set ip='$ip' WHERE id=$id_old;");
+
+?>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+	<meta http-equiv="content-type" content="text/html" />
+    <title>Admin</title>
+    <meta http-equiv="content-type" content="text/html" />
+    <link rel="stylesheet" href="css/style_ad.css" />
+    <style>
+    #login td,tr{
+          padding-bottom: 10px;
+    }
+    #login input{
+        height: 20px;
+    }
+    
+    </style>
+    <link rel="stylesheet" href="css/popup.css" />
+    <script type="text/javascript" src="js/jquery-2.0.0.js" ></script>
+    <script type="text/javascript" src="js/admin.js" ></script>
+    <script>
+   
+    </script>
+</head>
+
+<body>
+<section id="login" style=" width: 400px; color: black; margin: 60px auto; background: white; padding-top: 30px; text-align: center;padding-bottom: 30px;  "  >
+<table style=" text-align: left;   margin: auto;">
+<tr><td>User</td><td><input id="id" type="text" height="15px"/></td></tr>
+<tr><td style="width: 80px;">Password</td><td><input id="pass" type="password"  height="15px"/></td></tr>
+<tr><td></td><td><button id="ok">Đăng nhập</button></td></tr>
+</table>
+</section>
+<section id="main" style=" margin: 100px;margin-top: 80px;   padding-bottom: 50px;   min-width: 1100px;  display: none;">
+<div id="tables" style="/* overflow: auto; */ padding-top: 1px; ">
+<table class="zebra-style" id="dtable">
+    <thead>
+        <tr>
+        <th scope="col">STT</th>
+        <th scope="col" style="width: 250px; text-align: center;">Name</th>
+        <th scope="col" style="min-width: 650px; text-align: center;">Question</th>
+        <th scope="col" style="width: 150px; text-align: center;">Now aws</th>
+        <th scope="col" style="width: 200px; text-align: center;">Aws</th>
+        <th scope="col" style="width: 150px; text-align: center;">View</th>
+        <th scope="col" style="width: 200px; text-align: center;">Del aws</th>
+        <th scope="col" style="width: 250px; text-align: center;">Hide view</th>
+        </tr>
+    </thead>
+<tbody id="viewdata" style="color: black;"  >
+
+<?php if(isset($show)) echo $show ?>
+
+</tbody>
+</table>
+</div>
+
+</section>
+<div id="popup1" class="modal-box">
+  <div class="modal-body">
+    <p><textarea id="msg_aws" class="txtarea" tabindex="4" placeholder="Câu trả lời" required></textarea></p>
+  <p><button id="send_a"> Trả lời</button>    <button class="btn btn-small js-modal-close">Close</button></p>
+  </div>
+</div>
+
+<div id="popup2" class="modal-box">
+  <div id="print" class="modal-body">
+  </div>
+  <div><button class="btn btn-small js-modal-close" style="margin-bottom: 20px;">Close</button>
+  </div>
+</div>
+
+</body>
+</html>
