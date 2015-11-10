@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jundat95</title>
+</head>
+<body>
+	<script type="text/javascript" >
+
+			var enter ="<br>";
+
+			this.Nguoi = new function()
+			{
+				this.ten = "Ngo Doan Tinh";
+				this.tuoi = 20;
+				this.cao = 173;
+				this.getTuoi = getTuoi;
+				
+				function getTuoi()
+				{
+					return (this.tuoi+this.cao); 	
+				}
+			}
+
+			var Dog =
+			{
+				name:"Dog",
+				loai:"Dog Family",
+				age:200,
+
+				getName : function()
+				{
+					return this.name+" "+this.loai;
+				}
+			};
+
+			document.write("Ten Cua Nguoi: "+this.Nguoi.ten+enter);
+			document.write("Tuoi nguoi: "+Nguoi.getTuoi()+enter);
+			document.write("Chieu cao: "+Nguoi.cao+enter);
+
+			document.write("Ten Dong Vat: "+Dog.getName()+enter);
+			document.write("Tuoi dong vat: "+Dog.age);
+
+
+	</script>
+</body>
+</html>

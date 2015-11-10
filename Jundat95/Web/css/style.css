@@ -1,0 +1,21 @@
+body
+{
+	background: #34495e;
+	color: #ecf0f1;
+	font-family: "Timea New Roman",rerif;
+}
+h1
+{
+	font-size: 2em;
+	color: #0ff;
+	text-align: center;
+	text-decoration: overline;
+	text-transform: capitalize;
+	font-weight: ;
+}
+p
+{
+	text-align: center;
+	font-style: italic;
+	font-size: 20px;
+}

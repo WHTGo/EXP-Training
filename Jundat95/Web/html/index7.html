@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jundat95</title>
+</head>
+<body>
+	<script>
+		    var  enter = "<br>";
+			function Nguoi(name , pass)
+			{
+				this.name = name;
+				this.pass = pass;
+
+				this.getName = getName;
+				function getName()
+				{
+					return this.name;
+				}
+			}
+
+			Nguoi.prototype.getPass = function(_pass)
+			{
+				return _pass;
+			};
+			
+			Nguoi.prototype.level = 20;
+
+			Nguoi.prototype.getLevel = function()
+			{
+				return this.level;
+			}
+
+			function canhSat()
+			{
+			};
+
+			canhSat.prototype = new canhSat();
+			var canhSat = new canhSat("Canh Sat","Chim Sau");
+
+			document.write("getName: "+canhSat.name+enter);	
+			document.write("getLevel: "+canhSat.level+enter);
+			document.write("getPass: "+canhSat.getPass()+enter);
+
+	</script>
+</body>
+</html>

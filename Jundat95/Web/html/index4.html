@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jundat95</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+			//Test bien boolean
+			var test1 = ("javascript"==="JavaScript");
+			var test2 = ("NgoDoanTinh"==="NgoDoanTinh");
+			var test3 = ("TinhTang" !== "TinhYeu");
+			console.log('Test1 '+test1);
+			console.log('Test2 '+test2);
+			console.log('Test3 '+test3);
+
+			test1 = ( 1+2 ) > 5;
+			test2 =(5+6) >5;
+			console.log('test1 '+test1);
+			console.log('test2 '+test2);
+			//Test cac vong lap dieu kien, if else : va bai toan gia phuong trinh bac nhat: Ax + B = 0
+			var a = 5, b = 13;
+			if(a===0)
+			{
+				if(b===0)
+				{
+					console.log('Phuong trinh da cho vo so nghiem.');
+				}
+				else
+				{
+					console.log('Phuong trinh da cho vo nghiem.');	
+				}
+			}	
+			else
+			{
+				var ketqua = b/a;
+				console.log('Ket qua cua phuong trinh la:'+ketqua);
+			}		
+			// Su dung vong lap for tinh gia thua
+			var n = 5;
+			var gt = 1;
+			for(var i =1; i<n; i++)
+			{
+				gt *= i;
+			}
+			console.log('Gia Thua Cua: '+n +' La: '+gt);
+			// Su dung While
+			while(n > 0)
+			{
+				console.log('So La: '+n);
+				n--;
+			}
+			// Nghich them mot so thu hay hay nao!!
+			var ran = Math.random()*100;
+			console.log('Random '+ran);
+			// Xem co gi hot javascript
+
+
+	</script>
+</body>
+</html>

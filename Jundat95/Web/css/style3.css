@@ -1,0 +1,18 @@
+body
+{
+	background: #34495e;
+	font-family: "Times New Roman";
+}
+#box
+{
+	width: 300px;
+	height: 100px;
+	background: red;
+	margin: 0 auto;
+	border: 3px solid #000;
+}
+#box p
+{
+	width: 45%;
+	display: inline-block;you
+}
