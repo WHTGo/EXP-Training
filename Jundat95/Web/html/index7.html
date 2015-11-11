@@ -6,41 +6,51 @@
 </head>
 <body>
 	<script>
+
 		    var  enter = "<br>";
-			function Nguoi(name , pass)
-			{
+		    // Khoi tao doi tuong Con Nguoi
+			function ConNguoi(name , pass)
+			{	
+				// Thuoc tinh 
 				this.name = name;
 				this.pass = pass;
-
+				// Phuong thuc public
 				this.getName = getName;
 				function getName()
 				{
 					return this.name;
 				}
 			}
-
-			Nguoi.prototype.getPass = function(_pass)
+			// Them thuoc tinh public
+			ConNguoi.prototype.level = 50;
+			// Them phuong thuc public
+			ConNguoi.prototype.getPass = function()
 			{
-				return _pass;
-			};
-			
-			Nguoi.prototype.level = 20;
-
-			Nguoi.prototype.getLevel = function()
+				return this.pass;
+			}
+			ConNguoi.prototype.getLevel = function()
 			{
 				return this.level;
 			}
 
-			function canhSat()
+			//Tao doi tuong HocSinh
+			function HocSinh(name)
 			{
-			};
+				this.name = name;
+			}
+			// Ke thua tu Con Nguoi
+			HocSinh.prototype = new ConNguoi();
+			
+			// Khoi tao gia tri, cung nhu ke thua neu chua tao ra doi tuong do
+			var HocSinh = new ConNguoi("Hoc Sinh","hocsinh");
+			var CanhSat = new ConNguoi("Canh Sat","canhsat");
 
-			canhSat.prototype = new canhSat();
-			var canhSat = new canhSat("Canh Sat","Chim Sau");
+			document.write("Name:"+HocSinh.getName()+"<br>");
+			document.write("Pass:"+HocSinh.getPass() +"<br>");
+			document.write("level:"+HocSinh.getLevel() +"<br>");
 
-			document.write("getName: "+canhSat.name+enter);	
-			document.write("getLevel: "+canhSat.level+enter);
-			document.write("getPass: "+canhSat.getPass()+enter);
+			document.write("Ten: " +CanhSat.name);
+
 
 	</script>
 </body>
