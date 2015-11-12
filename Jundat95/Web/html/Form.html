@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jundat95</title>
+</head>
+<body>
+	
+	<input type="button" id="show-me" value="click-me" />
+
+	<ul>
+		<li><a href="#" class="show-me1"> 1.hello !! </a></li>
+		<li><a href="#"> 1.hello !! </a></li>
+		<li><a href="#" class="show-me1"> 1.hello !! </a></li>
+	</ul>
+
+	<p>From giao dien xu ly voi JavaScript</p>
+	<p>Dang nhap voi nick: gjundat-gjundat </p>
+	<form action="">
+
+		Name:<br>
+		<input type="text" id="name">
+		<br>
+		Pass:<br>
+		<input type="password" id="pass">
+		<br><br>
+		<input type="button" onclick="validate()" value="Login">
+
+	</form>
+
+	<script language="javascript" >
+
+			var  button = document.getElementById("show-me");
+
+			button.onclick = function()
+			{
+				alert('Hello');
+			};
+
+			
+			var a_list = document.getElementsByClassName("show-me1");
+			
+			for(var i = 0; i < a_list.length ; i++ )
+			{
+				a_list[i].onclick = function()
+				{
+					alert('Ban da bam vao.');
+				} 
+			};
+
+			function validate()
+			{
+				var  name = document.getElementById('name').value;
+				var  pass = document.getElementById('pass').value;
+
+				if(name ==="gjundat" && pass==="gjundat")
+				{
+					alert("Login success!!");
+				}
+				else
+				{
+					alert("Login field,Error user and pass.");
+				}
+
+			}
+
+
+	</script>
+
+	
+</body>
+</html>

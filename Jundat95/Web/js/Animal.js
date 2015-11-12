@@ -1,4 +1,4 @@
-// Xuong dong html
+//] Xuong dong html
 var enter ="<br>"; 
 // Class Animal
 function Animal(name, kind, weight)

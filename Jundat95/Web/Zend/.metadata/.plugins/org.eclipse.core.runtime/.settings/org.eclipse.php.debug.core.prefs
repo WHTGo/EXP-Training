@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+org.eclipse.php.debug.core.xdebugDebuggerSettingsProvider=
+org.eclipse.php.debug.core.zendDebuggerSettingsProvider=<settings><clientIp>192.168.0.107,127.0.0.1</clientIp><clientPort>10137</clientPort><ownerId>php-server-dfd921dc-3f8b-46ba-b116-fe86ed5317ee</ownerId><responseTimeout>60000</responseTimeout></settings>\u0005<settings><clientIp>192.168.0.107,127.0.0.1</clientIp><clientPort>10137</clientPort><ownerId>php-server-0138f290-7927-4143-bc17-8cacfda2a079</ownerId><responseTimeout>60000</responseTimeout></settings>
+org.eclipse.php.debug.core.zendExtendedDebuggerSettingsProvider=<settings><clientPort>10137</clientPort><ownerId>php-extension-exe-/home/jundat95/LapTrinh/ZendStudio/plugins/com.zend.php.debug.debugger.php56.linux.x86_64_13.0.0.v20150925-1108/resources/php56/php</ownerId></settings>\u0005<settings><clientPort>10137</clientPort><ownerId>php-extension-exe-/home/jundat95/LapTrinh/ZendStudio/plugins/com.zend.php.debug.debugger.php56.linux.x86_64_13.0.0.v20150925-1108/resources/php56/php-cgi</ownerId></settings>
+org.eclipse.php.debug.coredefaultPHP=PHP 5.6.7 (CLI)

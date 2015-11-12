@@ -1,10 +1,26 @@
-/*
- * This is a JavaScript Scratchpad.
- *
- * Enter some JavaScript, then Right Click or choose from the Execute Menu:
- * 1. Run to evaluate the selected text (Ctrl+R),
- * 2. Inspect to bring up an Object Inspector on the result (Ctrl+I), or,
- * 3. Display to insert the result in a comment after the selection. (Ctrl+L)
- */
-document.write('Ngo Daon Tinh');
+var enter = "<br>";
+// Class toan hoc
+function ToanHoc(a,b)
+{
+	this.a = a;
+	this.b = b;
 
+	this.TinhTong = TinhTong;
+	this.TinhThuong = TinhThuong;
+	this.TinhHieu = TinhHieu;
+
+	function TinhTong()
+	{
+		return (this.a + this.b);
+	};
+	function TinhThuong()
+	{
+		return (this.a * this.b);
+	};
+	function TinhHieu()
+	{
+		return (this.a / this.b);
+	}
+}
+
+var a = document.getElementById("");
