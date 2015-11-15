@@ -36,4 +36,6 @@ foreach($arr1 as $x => $x_value)
     echo "Key = ".$x." Value = ".$x_value."<br>";
 }
 
+echo $_SERVER["PHP_SELF"];
+
 ?>
