@@ -21,6 +21,22 @@ Xay dung 1 application bat ky su dung javascript ( javascript - ko phai jquery) 
  <li>.........................<li>
 </ul>
 
+<h3>Session 3 : PHP MYSQL </h3>
+<p>
+ Working with PHP and MySQL
+</p>
+<ul>
+ <li>1. Read and practice all W3school, PHP & MySQL Sections</li>
+ <li>2. Make a MVC Framework</li>
+</ul>
+
+<h3>Session 4 : CMS</h3>
+<p>
+Joomla Helix theme framework
+</p>
+<ul>
+ <li>1. make a demo theme</li>
+</ul>
 
 <p>
 Advisor : Nguyen Quang Hiep (Zera)<br />
