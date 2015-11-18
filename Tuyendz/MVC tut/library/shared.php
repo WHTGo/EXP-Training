@@ -22,11 +22,9 @@ function stripSlashesDeep($value) {
 }
 
 function removeMagicQuotes() {
-    if ( addslashes() ) {
         $_GET    = stripSlashesDeep($_GET   );
         $_POST   = stripSlashesDeep($_POST  );
         $_COOKIE = stripSlashesDeep($_COOKIE);
-    }
 }
 
 /** Check register globals and remove them **/
@@ -54,8 +52,12 @@ function callHook() {
 
     $controller = $urlArray[0];
     array_shift($urlArray);
-    $action = $urlArray[0];
-    array_shift($urlArray);
+    if (isset($urlArray[0])) {
+        $action = $urlArray[0];
+        array_shift($urlArray);
+    } else {
+        $action = 'view'; // Default Action
+    }
     $queryString = $urlArray;
 
     $controllerName = $controller;

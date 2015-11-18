@@ -4,7 +4,7 @@
 
 define ('DEVELOPMENT_ENVIRONMENT',true);
 
-define('DB_NAME', 'framework');
+define('DB_NAME', 'quanlybanhanggg');
 define('DB_USER', 'root');
-define('DB_PASSWORD', 'anhtuyen9x');
+define('DB_PASSWORD', '');
 define('DB_HOST', 'localhost');

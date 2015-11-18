@@ -9,7 +9,7 @@ class CategoriesController extends VanillaController
 
     function view($categoryId = null)
     {
-        $this->Category->where('parent_id',$categoryId);
+        $this->Category->where('DiaChi',$categoryId);
         $this->Category->showHasOne();
         $this->Category->showHasMany();
         $subcategories = $this->Category->search();
@@ -25,10 +25,10 @@ class CategoriesController extends VanillaController
 
     function index()
     {
-        $this->Category->orderBy('name','ASC');
+        $this->Category->orderBy('TenK','ASC');
         $this->Category->showHasOne();
         $this->Category->showHasMany();
-        $this->Category->where('parent_id','0');
+        $this->Category->where('DiaChi','0');
         $categories = $this->Category->search();
         $this->set('categories',$categories);
     }

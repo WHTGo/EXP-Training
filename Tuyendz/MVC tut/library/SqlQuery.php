@@ -6,20 +6,29 @@ class SQLQuery {
 
     /** Connects to database **/
 
-    function connect($address, $account, $pwd, $name) {
-        $this->_dbHandle = @mysqli_connect($address, $account, $pwd);
-        if ($this->_dbHandle != 0) {
-            if (mysqli_select_db($name, $this->_dbHandle)) {
-                return 1;
-            }
-            else {
-                return 0;
-            }
+    function connect($address, $account, $pwd, $dbname) {
+     $this->_dbHandle = new mysqli("localhost","root","","quanlybanhanggg");
+        if($this->_dbHandle->connect_error)
+        {
+            echo "Khong the ket noi toi MYSQL: (".$this->_dbHandle->connect_error.")".$this->_dbHandle->connect_error;
         }
-        else {
-            return 0;
+        else
+        {
+            echo "Da ket noi thanh cong toi MYSQL";
         }
+
+        do{
+            if($res = $this->_dbHandle->store_result())
+            {
+                var_dump($res->fetch_assoc(MYSQLI_ASSOC));
+                $res->free();
+
+            }
+
+        }while($this->_dbHandle->more_results()&&$this->_dbHandle->next_result());
     }
+
+
 
     /** Disconnects from database **/
 
@@ -37,7 +46,7 @@ class SQLQuery {
     }
 
     function select($id) {
-        $query = 'select * from `'.$this->_table.'` where `id` = \''.mysqli_real_escape_string($id).'\'';
+        $query = 'select * from `'.$this->_table.'` where `id` = \''.addslashes($id).'\'';
         return $this->query($query, 1);
     }
 
@@ -55,8 +64,8 @@ class SQLQuery {
             $tempResults = array();
             $numOfFields = mysqli_num_fields($this->_result);
             for ($i = 0; $i < $numOfFields; ++$i) {
-                array_push($table,mysqli_field_table($this->_result, $i));
-                array_push($field,mysqli_field_name($this->_result, $i));
+                array_push($table,mysqli_fetch_field($this->_result, $i));
+                array_push($field,mysqli_fetch_field($this->_result, $i));
             }
 
 
