@@ -80,7 +80,7 @@ class SQLQuery {
 
     /** Get number of rows **/
     function getNumRows() {
-        return mysql_num_rows($this->_result);
+        return mysqli_num_rows($this->_result);
     }
 
     /** Free resources allocated by a query **/
