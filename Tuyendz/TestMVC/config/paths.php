@@ -1,3 +1,3 @@
 <?php
 	
-	define('URL', 'http://localhost/TestMVC/');
+	define('URL', 'http://localhost/EXP-Training/Tuyendz/TestMVC/');

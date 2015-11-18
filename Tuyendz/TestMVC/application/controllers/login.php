@@ -7,6 +7,11 @@ class Login extends Controller
 	{
 		# code...
 		parent::__construct();
+	}
+
+
+	function Index()
+	{
 		$this->view->render('Login/index');
 	}
 }

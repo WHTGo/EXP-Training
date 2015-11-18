@@ -14,6 +14,7 @@ class Bootstrap
             # code...
             require 'application/controllers/index.php';
             $controller = new Index();
+            $controller->Index();
             return false;
         }
 
@@ -44,6 +45,12 @@ class Bootstrap
             {
                 $controller->{$url[1]}();
             }
-        }
+            else
+            {
+                 $controller->Index();
     }
+            }
+        }
+
+
 }

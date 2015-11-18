@@ -13,10 +13,19 @@ class View
         // echo 'Day la View !! </br>';	
     }
 
-    public function render($name)
+    public function render($name,$noInclude = false)
     {
-            require 'application/views/header.php';
-            require 'application/views/'.$name.'.php';
-            require 'application/views/footer.php';
+
+            if($noInclude == true)
+            {
+                require 'application/views/'.$name.'.php';
+            }
+            else
+            {
+                require 'application/views/header.php';
+                require 'application/views/'.$name.'.php';
+                require 'application/views/footer.php';
+            }
+            
     }
 }

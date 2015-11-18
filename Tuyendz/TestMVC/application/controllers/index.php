@@ -6,7 +6,19 @@ class Index extends Controller
     {
         parent::__construct();
 
-        $this->view->render('index/index');
+       
      }
+
+     function Index()
+	{
+		echo "INSIDE INDEX INDEX";
+		 $this->view->render('index/index');
+
+	}
+	
+	function details()
+	{
+		$this->view->render('index/index');
+	}
 
 }

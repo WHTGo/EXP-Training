@@ -11,18 +11,22 @@ class Help extends Controller
     function __construct()
     {
         parent::__construct();
-        $this->view->render('help/index');
     }
 
 
+        function Index()
+    {
+         $this->view->render('help/index');
+    }
+
     public function orther($arg = false)
     {
-        echo '  Toi la orther !! </br>';
-        echo 'Cai Dat: ' .$arg.'</br> ';
+
 
 
         require 'application/models/help_model.php';
-        $help_model = new Help_Model();
+        $model = new Help_Model();
+        $this->view->blah =$model->blah();
     }
 
 }

@@ -11,8 +11,11 @@ class Error extends Controller
     function __construct()
     {
         parent::__construct();
-        echo 'Loi !!';
-        $this->view->msg= 'page khong the thoat !! ';
-        $this->view->render('error/index');
+        
     }
+       function Index()
+	{
+		 $this->view->msg= 'page khong the thoat !! ';
+		 $this->view->render('error/index');
+	}
 }
