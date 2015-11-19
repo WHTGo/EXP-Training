@@ -11,14 +11,12 @@ class Index extends Controller
 
      function Index()
 	{
-		echo "INSIDE INDEX INDEX";
 		 $this->view->render('index/index');
-
 	}
 	
-	function details()
+	function run()
 	{
-		$this->view->render('index/index');
+		$this->model->run();
 	}
 
 }
