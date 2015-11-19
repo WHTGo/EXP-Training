@@ -32,10 +32,12 @@
          {
              require 'controllers/error.php';
              $controller = new Error();
+             $controller->Index();
              return false;
          };
 
          $controller = new $url[0]();
+         $controller->loadModel($url[0]);
 
          if(isset($url[2]))
          {
@@ -52,13 +54,12 @@
          {
              if(isset($url[1]))
              {
-                 //$controller->index();
                  $controller ->{$url[1]}();
-                 echo $url[1];
              }
              else {
                  $controller->index();
              }
+
          };
 
      }

@@ -1,2 +1,1 @@
-<hr/>
-<?php echo $this->msg; ?>
+<p>This page does not exists !!</p>

@@ -7,24 +7,14 @@
  */
 class Model
 {
-    var $conn;
+    var $db;
     public function __construct()
     {
-        $conf = new Config();
-        try
-        {
-            $this->conn = new PDO("mysql:host=$conf->servername; dbname=$conf->dbname",$conf->username,$conf->password);
-            //$this->conn = new PDO("mysql:host=localhost; dbname=services",'root','');
-
-        }catch (PDOException $ex)
-        {
-            print $ex;
-            die();
-        }
+        $this->db = new Database();
     }
 
     public function query($sql)
     {
-        return $this->conn->query($sql);
+        return $this->db->query($sql);
     }
 }

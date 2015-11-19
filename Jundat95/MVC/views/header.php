@@ -7,11 +7,11 @@
 </head>
 <body>
     <div id="header">
-        Header
+        <h3>Header</h3>
         <br>
-        <a href="index">Home</a>
-        <a href="help">Help</a>
-        <a href="login">Login</a>
-        <a href="UsersController">User</a>
+        <a href="Index">Home</a>
+        <a href="Login">Login</a>
+        <a href="User">User</a>
+        <a href="Help">Help</a>
     </div>
     <div id="content">

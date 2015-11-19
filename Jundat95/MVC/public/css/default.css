@@ -1,7 +1,7 @@
 body
-{
-    background:#f6f7f8;
-}
+ {
+     background:#f6f7f8;
+ }
 #header
 {
     background:#45619D;
@@ -17,4 +17,8 @@ body
 {
     background:#45619D;
     padding: 20px;
+}
+.error
+{
+    color: red;
 }

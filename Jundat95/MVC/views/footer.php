@@ -1,6 +1,6 @@
     </div>
 </body>
     <div id="footer">
-        Footer
+        (c) copy by Jundat95
     </div>
 </html>
