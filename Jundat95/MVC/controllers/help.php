@@ -10,14 +10,16 @@ class Help extends  Controller
     public function __construct()
     {
         parent::__construct();
-        echo "<br> I can help you! ";
     }
-    public function Other($arg = false)
-    {
-        echo "<br> Controller Other.";
-        echo "<br> Option choose: $arg";
 
-        require 'models/help_model.php';
-        $model = new Help_Model();
+    public function index()
+    {
+        $this->view->render('help/index',null);
+    }
+
+    public function other()
+    {
+        require 'models/HelpModel.php';
+        $model = new HelpModel();
     }
 }

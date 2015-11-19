@@ -11,8 +11,20 @@ class View
     {
 
     }
-    public  function  render($name)
+
+    public  function  render($name,$data = false)
     {
-        require 'views/'.$name.'.php';
+            if($data == true)
+            {
+                require 'views/header.php';
+                require 'views/' . $name . '.php';
+                require 'views/footer.php';
+            }
+            else
+            {
+                require 'views/header.php';
+                require 'views/' . $name . '.php';
+                require 'views/footer.php';
+            }
     }
 }

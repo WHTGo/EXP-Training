@@ -1,19 +1,20 @@
 body
 {
-    background: silver;
+    background:#f6f7f8;
 }
 #header
 {
-    background: #b5d592;
+    background:#45619D;
     padding: 20px;
+    color: #f6f7f8;
 }
 #content
 {
-    background:#0066ff;
+    background:#E9EAED;
     padding: 20px;
 }
 #footer
 {
-    background:#FF8900;
+    background:#45619D;
     padding: 20px;
 }

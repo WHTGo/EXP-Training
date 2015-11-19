@@ -11,12 +11,11 @@ class Index extends Controller
     public function __construct()
     {
         parent::__construct();
-        $this->view->render('index/index');
+
     }
 
-//    public function Other($arg = false)
-//    {
-//        echo "<br> Controller Other.";
-//        echo "<br> Option choose: $arg";
-//    }
+    public function index()
+    {
+        $this->view->render('index/index',null);
+    }
 }
