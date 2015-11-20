@@ -7,11 +7,19 @@
 </head>
 <body>
     <div id="header">
-        <h3>Header</h3>
-        <br>
-        <a href="Index">Home</a>
-        <a href="Login">Login</a>
-        <a href="User">User</a>
-        <a href="Help">Help</a>
+        <h4>Header</h4>
+        <div id="menu">
+            <ul>
+                <li><a href="<?php echo URL; ?>Index">Home</a></li>
+
+                <li><a href="<?php echo URL; ?>User">User</a>
+                    <ul>
+                        <li><a href="<?php echo URL; ?>Login">Login</a></li>
+                        <li><a href="<?php echo URL; ?>Signup">Signup</a></li>
+                    </ul>
+                </li>
+                <li><a href="<?php echo URL; ?>Help">Help</a></li>
+            </ul>
+        </div>
     </div>
     <div id="content">

@@ -19,7 +19,6 @@ class Help extends  Controller
 
     public function other()
     {
-        require 'models/HelpModel.php';
-        $model = new HelpModel();
+        $this->view->render('help/index',null);
     }
 }
