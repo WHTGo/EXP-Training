@@ -7,7 +7,7 @@ class Help_Model extends Model
         echo 'help model !';
     }
 
-    function blah()
+    public function blah()
     {
     	return 10+10;
     }

@@ -13,5 +13,13 @@ class Login extends Controller
 	function Index()
 	{
 		$this->view->render('Login/index');
+
 	}
+	
+	function login()
+	{
+		$this->login->run();
+	}
+
+
 }
