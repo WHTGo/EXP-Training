@@ -1,4 +1,5 @@
 <?php
+    echo count($data['users']);
     echo '<ul>';
     foreach($data['users'] as $u)
     {
