@@ -1,0 +1,645 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Forkio</title>
+<link rel="stylesheet" href="css/bootstrap.min.css" />	
+<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>	
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,700">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700">
+<link rel="stylesheet" style="text/css" href="owl.carousel/owl-carousel/owl.carousel.css" media="all"/>
+<script type="text/javascript" src="owl.carousel/owl-carousel/owl.carousel.js"></script>	
+<link rel="stylesheet" style="text/css" href="owl.carousel/owl-carousel/owl.theme.css" media="all"/>
+<link rel="stylesheet" style="text/css" href="style.css" media="all" />
+<link rel="stylesheet" style="text/css" href="animate.css-master/animate.css-master/animate.css" media="all" />
+<link rel="stylesheet" style="text/css" href="css/responsive.css" media="all" />
+<link rel="stylesheet" type="text/css" href="font-awesome-4.4.0/css/font-awesome.css">
+<script type="text/javascript" src="onpagenav/jquery.nav.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script>	
+		
+		
+		var body = $('body'),
+			menu = {
+				config : {
+					trigger : jQuery('.nav-opener'),
+					open : false
+				},
+				init : function() {
+					this.config.trigger.click(this.toggle.bind(this));
+				},
+				toggle : function() {
+					if(this.config.open) {
+						body.removeClass('header-in');
+						
+					}
+					else {
+						body.addClass('header-in');
+					}
+					this.config.open = !this.config.open;
+				}
+			};
+		var scroller = {
+			config : {
+				docElem : window.document.documentElement,
+				// The viewportFactor defines how much of the appearing item has to be visible in order to trigger the animation
+				// if we'd use a value of 0, this would mean that it would add the animation class as soon as the item is in the viewport. 
+				// If we were to use the value of 1, the animation would only be triggered when we see all of the item in the viewport (100% of it)
+				viewportFactor : 0,
+				elems : '.slide-holder'
+			},
+			getViewportH : function() {
+				var client = this.config.docElem['clientHeight'],
+					inner = window['innerHeight'];
+				
+				if( client < inner )
+					return inner;
+				else
+					return client;
+			},
+			scrollY : function() {
+				return window.pageYOffset || this.config.docElem.scrollTop;
+			},
+			getOffset : function(el) {
+				var offsetTop = 0, offsetLeft = 0;
+				do {
+					if ( !isNaN( el.offsetTop ) ) {
+						offsetTop += el.offsetTop;
+					}
+					if ( !isNaN( el.offsetLeft ) ) {
+						
+						offsetLeft += el.offsetLeft;
+					}
+				} while( el = el.offsetParent )
+
+				return {
+					top : offsetTop,
+					left : offsetLeft
+				}
+			},
+			inViewport : function(el, h) {
+				var elH = el.offsetHeight,
+					scrolled = this.scrollY(),
+					viewed = scrolled + this.getViewportH(),
+					elTop = this.getOffset(el).top,
+					elBottom = elTop + elH,
+					// if 0, the element is considered in the viewport as soon as it enters.
+					// if 1, the element is considered in the viewport only when it's fully inside
+					// value in percentage (1 >= h >= 0)
+					h = h || 0;
+
+				return (elTop + elH * h) <= viewed && (elBottom) >= scrolled;
+			},
+			init : function() {
+				this.sections = jQuery(this.config.elems);
+				this.didScroll = false;
+
+				var self = this,
+					scrollHandler = function() {
+						if( !self.didScroll ) {
+							self.didScroll = true;
+							setTimeout( function() { self.scrollPage(); }, 60 );
+						}
+					},
+					resizeHandler = function() {
+						function delayed() {
+							self.scrollPage();
+							self.resizeTimeout = null;
+						}
+						if ( self.resizeTimeout ) {
+							clearTimeout( self.resizeTimeout );
+						}
+						self.resizeTimeout = setTimeout( delayed, 200 );
+					};
+
+				window.addEventListener( 'scroll', scrollHandler, false );
+				window.addEventListener( 'resize', resizeHandler, false );
+			},
+			scrollPage : function() {
+				var self = this;
+
+				this.sections.each(function() {
+					if( self.inViewport( this, self.config.viewportFactor ) ) {
+						jQuery(this).addClass('scroll-effect-animate');
+					}
+					else {
+						// this add class init if it doesn't have it. This will ensure that the items initially in the viewport will also animate on scroll
+						jQuery(this).addClass('scroll-effect-init');
+						jQuery(this).removeClass('scroll-effect-animate');
+					}
+				});
+				this.didScroll = false;
+			}
+		}
+		var menu1 = true;
+		$(document).ready(function(){	
+		
+			scroller.init();
+			menu.init();	
+			///$(".nav-opener").click(function(){
+				//$(".header-right").addClass("header-in");			
+			///});		
+			var kt = ($(".header-right").hasClass("header-in"));// kiem tra header//
+			
+			//var nv = ($(".nav-opener").hasClass("nav-hieu")); // kiem tra nav//
+			
+			//if (nv==false)
+			//{
+			
+			/*	$(".header-right").addClass("header-in");
+				$(".header-in").hide();
+				$(".opener-holder").click(function(){
+					if (menu1)
+					{			
+						$(".header-right").addClass("anime1");
+						menu1 = false;
+						$("a").addClass("nav-hieu");				
+						$(".header-right").toggle();	
+					}
+					else{
+						menu1 = true;
+						$("a").removeClass("nav-hieu");
+						$(".header-right").toggle();
+						
+					}
+						
+				}); */
+			
+			//}  
+			//else{
+				//$(".opener-holder").click(function(){
+					//$("a").removeClass("nav-hieu");
+				//});				
+			//}
+			
+			$(".opener-holder").click(function(){
+				$("body").toggleClass("nav-hieu");
+			});
+			$("#owl-demo-slideshow").owlCarousel({			
+				navigation :true,
+				slideSpeed : 300,
+				paginationSpeed : 400,
+				singleItem:true					
+			});
+			$("#nav").onePageNav({
+				currentClass:'active',	
+				changeHash: false,
+				scrollSpeed: 400,
+						
+			});
+		});
+</script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<header id ="header">
+			<div class="container">
+				<div class="logo"><a href="#"><img class="img-responsive" src="images/logo.png"/></a></div>
+					<nav id="nav">
+						<div class="opener-holder">
+							<a href="#" class="nav-opener"><span></span></a>
+						</div>
+						<a href="#" class="btn btn-primary rounded">Buy Now</a>
+						<div class="header-right anima">
+							<ul id="nav" class="navbar-nav-one">
+								<li class="active visible-sm visible-xs current"><a class="forst" href="#">Home</a></li>
+								<li><a href="#fork">Overview</a></li>
+								<li><a href="#area">About Fork</a></li>
+								<li><a href="#steven">Buying Options</a></li>
+								<li><a href="#footer">Support</a></li>
+							</ul>
+							<div class="drop-holder visible-sm visible-xs">
+								<li>Follow Us</li>
+								<ul class="social-networks">
+									<li><a class="fa fa-github" href="#"></a></li>
+									<li><a class="fa fa-twitter" href="#"></a></li>
+									<li><a class="fa fa-facebook" href="#"></a></li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+						
+			</div>
+		</header>
+
+		<section id="fork">
+			<div class="container">	
+				
+				<div class="fork">
+					<h1 class="app">Dev Web</h1>
+					<p>A real gamechanger in the world of web development</p>
+					<span>VERSION 2.8 FOR MAC AND WINDOWN</span>
+				</div><!---.fork--->
+			</div>
+		</section><!----#fork---->
+		<section id="main">
+			<div class="container">
+				<div class="down">
+					<a class="btn download" href="#">Download For Free Now</a>
+					<p>Unlimited 30-Days Trial Period</p>
+				</div>
+				<div class="row">
+					<div class="col-md-offset-1 col-md-10 text-box">
+						<h2 class="wow bounceInLeft animated">REVOLUTIONARY EDITOR</h2>
+						<p>Aenean cursus imperdiet nisl id fermenum. Aliquam pharetra dui laoreet vulputate dignissim. 
+						Sed id metus id quam auctor molestie eget ut augue. </p>
+					</div>				
+				</div>
+				<div class="watch">
+					<img class="star img-responsive" src="images/star.png"/>
+				</div>
+			</div>
+		</section><!---#main--->
+		<section id="area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5">
+						<h2 class="here text-primary none">&lt;Here is what you get&gt;</h2>
+						<ul>
+							<li class="clearfix">
+								<div class="img-holder">
+									<img src="images/holder_1.png"/>
+								</div>
+								<div class="text-holder">
+									<h3 class="creat">Creatred to Make The Web Better</h3>
+									<p>Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue. </p>
+								</div>	
+								
+							</li>
+							<li class="clearfix">
+								<div class="img-holder">
+									<img src="images/holder-2.png"/>
+								</div>
+								<div class="text-holder">
+									<h3 class="creat">Creatred to Make The Web Better</h3>
+									<p>Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue. </p>
+								</div>
+								
+							</li>
+							<li class="clearfix">
+								<div class="img-holder">
+									<img src="images/holder_3.png"/>
+								</div>
+								<div class="text-holder">
+									<h3 class="creat">Creatred to Make The Web Better</h3>
+									<p>Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue. </p>
+								</div>
+							</li>
+							<li class="clearfix">
+								<div class="img-holder">
+									<img src="images/holder_4.png"/>
+								</div>
+								<div class="text-holder">
+									<h3 class="creat">Creatred to Make The Web Better</h3>
+									<p>Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue. </p>
+									
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-7">
+						<div class="slide-holder scroll-effect-init">
+
+								<h2 class="here text-primary not-none">&lt;Here is what you get&gt;</h2>
+							
+							<div class="img-slide scroll-trigger">
+								<img src="images/img-01.png"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!--area-->
+		<section id="steven">
+			<div class="container">
+				<div class="steven-top">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<div id="owl-demo-slideshow" class="owl-theme">
+								<div class="box clearfix item">
+									<div class="img-box">
+										<img src="images/steven-1.png"/>
+									</div>
+									<div class="box-holder">
+										<h3>Steven Walters</h3>
+										<a href="#">@DoctorS</a>
+									</div>
+									<p>
+										<a href="#">@Pixelbuddha</a>
+										Suspendisse sodales sem est, in scelerisque felis scelerisque in. Aenean faucibus mollis risus. Praesent sit amet erat eget eros.
+									</p>
+									<em class="hours">1 hours ago</em>
+								</div><!---.box---->
+								<div class="box clearfix item">
+									<div class="img-box">
+										<img src="images/steven-1.png"/>
+									</div>
+									<div class="box-holder">
+										<h3>Steven Walters</h3>
+										<a href="#">@DoctorS</a>
+									</div>
+									<p>
+										<a href="#">@Pixelbuddha</a>
+										Suspendisse sodales sem est, in scelerisque felis scelerisque in. Aenean faucibus mollis risus. Praesent sit amet erat eget eros.
+									</p>
+									<em class="hours">2 hours ago</em>
+								</div><!---.box---->
+								<div class="box clearfix item">
+									<div class="img-box">
+										<img src="images/steven-1.png"/>
+									</div>
+									<div class="box-holder">
+										<h3>Steven Walters</h3>
+										<a href="#">@DoctorS</a>
+									</div>
+									<p>
+										<a href="#">@Pixelbuddha</a>
+										Suspendisse sodales sem est, in scelerisque felis scelerisque in. Aenean faucibus mollis risus. Praesent sit amet erat eget eros.
+									</p>
+									<em class="hours">3 hours ago</em>
+								</div><!---.box---->
+		
+							</div><!--owl-->
+						</div>
+					</div>
+				</div><!---.steven-top--->
+				<div class="block-frame">
+						<ul class="cta-list">
+							<li>
+								<a href="#" class="btn btn-default"><i class="fa fa-github"></i> GitHub</a>
+								<p>7 352 Followers</p>
+							</li>
+							<li>
+								<a href="#" class="btn btn-info"><i class="fa fa-twitter"></i> Twitter</a>
+								<p>136 312 Followers</p>
+							</li>
+							<li>
+								<a href="#" class="btn btn-blue-cta"><i class="fa fa-facebook"></i> Facebook</a>
+								<p>218 092 Subscribers</p>
+							</li>
+						</ul>
+				</div><!---.block-frame--->
+			</div>
+		</section><!--steven-->
+		<section id="visual">
+			<div class="visual-top">
+				<div class="container">
+					<h2 class="p-visual">People Are Talking About Fork</h2>
+					<div class="visual-center">
+						<div class="row row-top">
+							<div class="box-visual col-md-4 col-sm-6">
+								<div class="img-visual">
+									<img src="images/sma_03.png"/>
+								</div>
+								<p>Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis. </p>
+							</div>
+							<div class="box-visual col-md-4 col-sm-6">
+								<div class="img-visual logo-codrops">
+									<img src="images/forkio_05.png"/>
+								</div>
+								<p>Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque ac, mollis eleifend nibh.</p>
+							</div>
+							<div class="box-visual col-md-4 col-sm-6">
+								<div class="img-visual logo-w">
+									<img src="images/forkio_03.png"/>
+								</div>
+								<p>In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla, imperdiet nibh. Morbi tempus auctor felis ac vehicula. </p>
+							</div>
+							
+						
+						
+							<div class="box-visual col-md-4 col-sm-6">
+								<div class="img-visual logo-pixel">
+									<img src="images/forkio_03.png"/>
+								</div>
+								<p>Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis. </p>
+							</div>
+							<div class="box-visual col-md-4 col-sm-6">
+								<div class="img-visual">
+									<img src="images/forkio_04.png"/>
+								</div>
+								<p>Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque ac, mollis eleifend nibh.</p>
+							</div>
+							<div class="box-visual col-md-4 col-sm-6">
+								<div class="img-visual">
+									<img src="images/forkio_06.png"/>
+								</div>
+								<p>In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla, imperdiet nibh. Morbi tempus auctor felis ac vehicula. </p>
+							</div>
+							
+						</div>
+						
+					</div><!---.visual-center--->
+				</div>
+			</div><!----.visual-top--->
+			<div class="visual-bottom">
+				<div class="container">
+					<h2 class="p-visual">Fork Subscription Pricing</h2>
+					<div class="pricing-table">
+						<div class="row">
+							<div class="plan">
+								<div class="hder">	
+									<h3>STUDENTTS</h3>
+								</div>
+								<div class="per">
+									<span class="per-main">
+										<span class="symbol">$</span>
+										29
+									</span>
+									<span class="plan-add">per month</span>
+									<ul class="item-list">
+										<li>Personal License</li>								
+									</ul>
+									<button class="btn btn-item">PURCHASE</button>
+								</div>
+							
+							</div><!---plan--->
+							<div class="plan">
+								<div class="hder">	
+									<h3>PROFESSIONAL</h3>
+								</div>
+								<div class="per">
+									<span class="per-main">
+										<span class="symbol">$</span>
+										59
+									</span>
+									<span class="plan-add">per month</span>
+									<ul class="item-list gmail">
+										<li>Personal License</li>
+										<li>Email Support</li>
+									</ul>
+									<button class="btn btn-item">PURCHASE</button>
+								</div>							
+							</div><!---.plan-->
+							<div class="plan agency">
+								<div class="hder">	
+									<h3>AGENCY</h3>
+								</div>
+								<div class="per">
+									<span class="per-main">
+										<span class="symbol">$</span>
+										99
+									</span>
+									<span class="plan-add">per month</span>
+									<ul class="item-list">
+										<li>1-12 Team Members</li>
+										<li>Phone Support</li>
+									</ul>
+									<button class="btn btn-item">PURCHASE</button>
+								</div>
+							
+							</div><!---.plan agency--->
+							<div class="plan">
+								<div class="hder">	
+									<h3>ENTERPRIRS</h3>
+								</div>
+								<div class="per">
+									<span class="per-main">
+										<span class="symbol">$</span>
+										195
+									</span>
+									<span class="plan-add">per month</span>
+									<ul class="item-list gmail">
+										<li>Unlimited Team Members</li>
+										<li>24/ 7 Phone Support</li>
+									</ul>
+									<button class="btn btn-item">PURCHASE</button>
+								</div>	<!---.per--->					
+							</div><!---.plan--->
+						</div>
+					</div><!---.pricing-table--->
+					<p class="duis">Duis lobortis arcu sed arcu tincidunt feugiat. Nulla nisi mauris, facilisis vitae aliquet id, imperdiet quis nibh. Donec eget elit eu libero tincidunt consequat nec elementum orci. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+
+				</div>
+			</div>
+		</section><!--vusual-->
+		<section class="subscribe">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<h3 class="ribe">Subscribe To Our Newsletter</h3>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<form class="form-inline">
+							<div class="form-group">
+								<input id="exampleInputEmail2" class="form-control rounded" type="email" placeholder="Email..."></input>
+							</div>	
+							<button class="btn btn-sub">SUBSCRIBE</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section><!--subscribe-->
+		<section class="new-in">
+			<div class="container">
+				<div class="popular">
+					<div class="row">
+						<div class="popu">
+							<div class="col-md-4">
+								<h3 class="outsize">New in Release 2.8</h3>
+								<h4>Fully Available: Live Preview Support for Multiple Browsers</h4>
+								<p>Morbi faucibus ante ipsum, a tincidunt libero posuere et. 
+								Etiam tempor tortor at odio condimentum, sit amet fringilla 
+								ligula maximus. Mauris venenatis nisl nisi, et dictum dui 
+								aliquet nec. Sed erat, nec aliquam vel, aliquam ac felis. </p>
+								<h4>Improved Support for Typing </h4>
+								<p>Nulla purus quam, pulvinar sed ante et, feugiat maximus velit. Donec eu elit mauris. </p>
+								<h4>Improved Stability</h4>
+								<p>Proin id ligula eget massa tincidunt molestie. Morbi urna lectus, molestie vel quam vel, iaculis fermentum nunc. Morbi imperdiet, leo in interdum pretium.</p>
+								<button class="btn btn-new">Go to Release Log</button>
+							</div>
+						</div><!---.popu-->
+						<div class="popu">
+							<div class="col-md-4">
+								<h3 class="outsize">Popular Extensions</h3>
+								<h4><a href="#">Custom Themes 1.1</a></h4>
+								<p>Etiam viverra vulputate diam, pulvinar cursus augue egestas ullamcorper. </p>
+								<h4><a href="#">Filter Forge</a></h4>
+								<p>Nulla purus quam, pulvinar sed et, feugiat maximus velit.</p>
+								<h4><a href="#">WebZap</a></h4>
+								<p>Morbi imperdiet, leo in interdum pretium, elit eros dapibus velit, eu posuere quam diam vitae orci. Suspendisse interdum accumsan magna vitae commodo.</p>
+								<h4><a href="#">Renamy</a></h4>
+								<p>Vivamus consectetur suscipit elit, ut lacinia diam elementum </p>
+								<button class="btn btn-new">Go to Marketplace</button>
+							</div>
+						</div><!---.popu-->
+						<div class="popu">
+							<div class="col-md-4">
+								<h3 class="outsize">New From the Blog</h3>
+								<h4><a href="#">Morbi imperdiet, leo in interdum pretium.</a></h4>
+								<time class="date" datetime="2015-02-18">February 18, 2015</time>
+								<h4><a href="#">Donec orci ante, porta vel nulla quis, aliquet hendrerit leo.</a></h4>
+								<time class="date" datetime="2015-02-12">February 12, 2015</time>
+								<h4><a href="#">Suspendisse egestas vulputate luctus.</a></h4>
+								<time class="date" datetime="2015-02-06">February 6, 2015</time>
+								<h4><a href="#">Quisque varius ante lorem, eget pretium purus hendrerit a egestas.</a></h4>
+								<time class="date" datetime="2015-02-02">February 2, 2015</time>
+								<h4><a href="#">Phasellus in augue risus.</a></h4>
+								<time class="date" datetime="2015-01-23">January 23, 2015</time>
+								<button class="btn btn-new">Go to Blog</button>
+							</div>
+						</div><!---.popu-->
+					</div>
+				</div><!--.popular-->
+			</div>
+		</section>
+		<section id="footer">
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="ft_logo col-md-4">
+							<div class="img">
+								<img src="images/logo.png" alt="">
+							</div>
+							<div class="details">
+								<p>Lorem ipsum dolor sit amet, feugiat delicat liberavisse id cum no quo.</p>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="ct-logo">
+								<h3> Navigation</h3>
+								<nav>
+									<ul>
+										<li><a href="" title="">Home</a></li>
+										<li><a href="" title="">Overview</a></li>
+										<li><a href="" title="">About</a></li>
+										<li><a href="" title="">support</a></li>
+										<li><a href="" title="">buy option</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="view">
+								<div class="number">
+									<h3>347 567 78 90</h3>
+									<p>AVAILABLE FROM 12PM - 18PM</p>
+								</div>
+
+								<div class="adress">
+									<h4>New York, NY</h4>
+									<p>560 Judah St & 15th Ave, Apt 5 San Francisco, CA, 230903</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="info">
+								<h3>Info</h3>
+								<p>Wisi enim ad minim veniam, quis nostrud 
+								exerci tation ullamcorper suscipit lobortis 
+								nisl ut aliquip ex commodo consequat.
+								Autem vel hendrerit iriure dolor in 
+								hendrerit.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div><!--#footer--->
+	</div><!--warrper-->
+</body>
+</html>
