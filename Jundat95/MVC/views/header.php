@@ -11,11 +11,15 @@
         <div id="menu">
             <ul>
                 <li><a href="<?php echo URL; ?>Index">Home</a></li>
-
+                <li><a href="<?php echo URL; ?>Order">Order</a>
+                    <ul>
+                        <li><a href="<?php echo URL; ?>Order/Add">Add</a></li>
+                    </ul>
+                </li>
                 <li><a href="<?php echo URL; ?>User">User</a>
                     <ul>
-                        <li><a href="<?php echo URL; ?>Login">Login</a></li>
-                        <li><a href="<?php echo URL; ?>Signup">Signup</a></li>
+                        <li><a href="<?php echo URL; ?>User/Login">Login</a></li>
+                        <li><a href="<?php echo URL; ?>User/Signup">Signup</a></li>
                     </ul>
                 </li>
                 <li><a href="<?php echo URL; ?>Help">Help</a></li>

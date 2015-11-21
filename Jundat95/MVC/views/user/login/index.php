@@ -26,8 +26,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         {
                 $pass = inputdata($_POST["pass"]);
         }
-
-
 }
 // Chuan hoa xau nhap vao
 function inputdata($data)
@@ -39,7 +37,7 @@ function inputdata($data)
 }
 ?>
 
-        <form method="post" action="login/login" >
+        <form method="post" action="doLogin" >
 
                 <br>Name:
                 <br><input name="name" type="text" >

@@ -38,20 +38,20 @@ function inputdata($data)
     return $data;
 }
 ?>
-<form method="post" action="signup/signup" >
+<form method="post" action="dosignup" >
 
     <br>Name:
     <br><input name="name" type="text" >
-    <span class="error">*<?php echo$erroName ?></span>
+    <span class="error">*<?php echo $erroName ?></span>
     <br>Pass:
     <br><input name="pass" type="password" >
-    <span class="error">*<?php echo$erroPass ?></span>
+    <span class="error">*<?php echo $erroPass ?></span>
     <br>Phone:
     <br><input name="phone" type="number">
-    <span class="error">*<?php echo$erroPhone ?></span>
+    <span class="error">*<?php echo $erroPhone ?></span>
     <br>Email:
-    <br><input name="email" type="text">
-    <span class="error">*<?php echo$erroEmail ?></span>
+    <br><input name="email" type="email">
+    <span class="error">*<?php echo $erroEmail ?></span>
 
     <br><input name="login" type="submit" value="insert">
 

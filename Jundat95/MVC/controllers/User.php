@@ -14,9 +14,6 @@ class User extends  Controller
     public function __construct()
     {
         parent::__construct();
-
-        //$this->model = new UserModel();
-       // $this->view = new View();
     }
     public function index()
     {
@@ -24,5 +21,24 @@ class User extends  Controller
         $data = array();
         $data['users'] = $users;
         $this->view->render('user/index',$data);
+    }
+
+    public function login()
+    {
+        $this->view->render('user/login/index',null);
+    }
+    public function signup()
+    {
+        $this->view->render('user/signup/index',null);
+    }
+    public function doSignup()
+    {
+        $data = $this->model->signup();
+        $this->view->render('user/signup/signup',$data);
+    }
+    public function doLogin()
+    {
+        $data = $this->model->login();
+        $this->view->render('user/login/login',$data);
     }
 }
