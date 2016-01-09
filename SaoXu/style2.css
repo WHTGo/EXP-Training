@@ -1,0 +1,165 @@
+
+  
+
+#top {
+    width: 800px;
+    height: 50px;
+    background-color: navy;
+    margin: auto;
+    text-align: center;
+    color:white; 
+}
+
+
+#frame {
+    width:800px;
+    height: 800px;
+    background-color: fuchsia;
+    margin: auto;
+}
+#left {
+    width:160px;
+    height:800px;
+    background-color:#A3A8DC;
+    float:left;
+}
+#main  {
+    width: 500px;
+    height: 800px;
+    background-color: #80FF80;
+    float:left;
+    
+}
+#right {
+    width:140px;
+    height:800px;
+    background-color:#804040;
+    float:left;
+}
+#bottom {
+    width: 800px;
+    height: 100px;
+    background-color: gray;
+    margin: auto;
+    text-align: center;
+    color:white;
+}
+img {
+    float: left;
+    
+}
+form {
+    width: 500px;
+    height: 20px;
+    margin:auto ;
+     border: burlywood;
+     color:  red;
+}
+fieldset{
+    background-color: silver;
+}
+#manu {
+    width:800px;
+    height: ;
+    background-color: aqua;
+    margin:auto;
+    outline-color: #400040;
+    
+}
+#manu ul {
+    list-style: none;
+}
+#manu ul li
+{   background: fuchsia;
+    position: relative;
+    float: left;
+}
+#manu li a
+{   
+    display: block;
+    color:#804040;
+    font-weight:bold ;
+    text-decoration: none;
+    padding: 0.3em 6px ;
+}
+#manu li a:hover 
+{    position: relative;
+     color: fuchsia;
+     background-color:#80FFFF;
+}
+#manu li ul  
+{
+  position: absolute;  
+  display: none;
+  width:10em;
+  
+}
+#manu li:hover ul 
+{    
+    display: block;
+}
+#manu ul li ul li {
+    width:100%;
+    border: 1px solid #80FFFF;
+}
+.one {
+    background: #804040;
+    width:240px;
+    height:240px;
+    margin: 5px;
+    float:right;   
+}
+.two {
+    background: #804040;
+    width:240px;
+    height:240px;
+    margin: 5px;
+    float:right;
+}
+a.three 
+{
+  background: #804040;
+    float:right; 
+}
+li {
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

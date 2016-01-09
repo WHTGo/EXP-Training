@@ -1,0 +1,237 @@
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p,a, em, font, img,
+strong, ol, ul, li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+}
+		
+body{
+	font-size: 62.5%;
+	 line-height: 1;
+	margin: 0;
+	background-image: url(images/body_bg.jpg);
+}
+a{
+	text-decoration: none;
+}
+#page_wrap{
+	width: 899px	;
+	height: 1500px;
+	margin: auto;
+}
+#top-page{
+	height:46px;
+	overflow: hidden;
+
+}
+#top-page div.search{
+	float: right;
+	margin: 9px 0 0 0 ;
+}
+input#s{
+	border: none;
+	font-size: 1.1em;
+	color: #a4a4a4;
+	padding: 5px 0 5px 5px;
+	width: 223px;
+	height: 23px;
+	background: transparent url(images/search.jpg) no-repeat;
+}
+#header{
+	width: 899px;
+	height: 261px;
+}
+
+#banner{
+	background: url("images/banner.png") no-repeat;
+    height: 242px;
+    width: 899px;
+    position: relative;
+}
+#banner img{
+	float: left;
+	margin: 90px 0 0 48px;
+}
+#contents{
+	height: 894px;
+    width: 899px;
+}
+#sidebar{
+	background-repeat: no-repeat;
+	background-image: url(images/sidebar-bg.jpg);
+	width: 257px;
+	float: left;
+	height: 894px;	
+}
+#mainNav{
+		 padding: 55px 25px 0 25px;
+}
+#mainNav ul{
+	font-size: 1.2em;
+	list-style: none;
+}
+#mainNav ul li{
+	padding: 8px 0 8px 0;
+	background-image: url(images/saperators.jpg) ;
+	background-repeat: repeat-x;
+	background-position: bottom center;
+}
+#mainNav ul li a{
+	color: white;
+	font-weight: bold;
+	padding: 5px 11px;
+	background: url(images/bullets.png) no-repeat  0 50%;
+}
+#mainNav ul li a:hover{
+	color: #a9ff00;
+}
+#mainNav ul li:last-child{
+	background: none;
+}
+
+#content{
+	background-repeat: no-repeat;
+	background-image: url("images/post_bg.jpg");
+    float: left;
+    height: 894px;
+    margin-left: 5px;
+    width: 637px;
+}
+.post-1{
+	color: #f1f1f1;
+	font-size: 1.1em;
+	line-height: 1.6em;
+	padding: 25px;
+	overflow: hidden;
+	background:url(images/post-saperator.jpg) repeat-x;
+	background-position: bottom center;	 
+}
+.post-1:last-child{
+	background: none;	
+}
+.metadata{
+	float: left;
+	margin-right: 25px;	
+}
+.metadata img{
+	padding: 4px;
+	background: #f1f1f1;
+	margin: 0 0 22px 0;	
+}
+.metadata p{
+	font-size: 1.0em;
+
+}
+.metadata p.post{
+	padding: 0 0 0 18px; 
+	background: url(images/post.png) no-repeat 0 50%;
+}
+.metadata p.date{
+	padding: 0 0 0 18px; 
+	background: url(images/date.png) no-repeat 0 50%;
+}
+.metadata p.comments{
+	padding: 0 0 0 18px; 	
+	background: url(images/comments.png) no-repeat 0 50%;
+}
+.metadata  a{
+	color: #f1f1f1;
+}
+.metadata strong{
+	color: #a9ff00;
+}
+#content div.post-1 h1{
+	margin-bottom: 10px;
+	font-size: 1.6em;
+}
+#content div.post-1 h1 a{
+	color: #a9ff00;
+}
+#content div.post-1 div.readMore a{
+	
+	color: #a9ff00;
+	background: url(images/read-more.png) no-repeat 0 50%;
+	padding: 0 0 0 18px;	 
+}
+#content div.post-1 div.readMore a:hover{
+	color: #f1f1f1;
+	background: url(images/read-more.png) no-repeat 4px 50%;
+}
+
+
+#content div.post-1 div.readMore {
+	
+	color: #a9ff00;
+	padding: 0 0 0 18px;
+	background: url(images/read-more.png) no-repeat 0 50%;
+}
+.metadata a:hover{
+	text-decoration: underline;
+}
+#footer{
+	background-image: url(images/footer_bg.jpg);
+	background-repeat: no-repeat;
+	height: 349px;
+    width: 899px;
+}
+#footer div#copyright p{
+	float: left;
+    margin-top: 14px;
+    width: 450px;
+}
+#copyright{
+	border-bottom: 1px solid #367c93;
+    border-top: 1px solid #367c93;
+    height: 40px;
+    width: 899px;
+}
+#copyright ul{	
+	float: right;
+    list-style: none;
+    margin-top: 14px;
+}
+#copyright ul li{
+	float: left;
+    margin-right: 17px;			
+}
+#copyright ul li a{
+	color: #a9ff00;
+	text-decoration: none;	
+}
+#copyright p{
+	margin:15px;
+	color: #bab9b9;
+}
+#constrast img{
+	float: left;
+	margin: 9px;	
+}
+#constrast div.rule{
+	float: left;
+	color: #f1f1f1;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	margin: 15px 5px 20px 0;
+	width: 649px; height: 275px;
+	background:red url(images/bubble.png) no-repeat ;
+}
+#footer div#constrast div.rule a{
+	color: #a9ff00;
+	text-decoration: underline;
+}
+#footer div#constrast div.rule a:hover,#footer div#constrast div.rule a:active{
+	color: #a9ff00;
+	text-decoration: none;
+}
+#footer div#constrast div.rule div.inside{
+	padding: 25px 5px 0px 80px;	
+}
+
+#footer div#constrast div.rule div.inside ol{
+	margin: 10px 0 10px 30px;
+}
+

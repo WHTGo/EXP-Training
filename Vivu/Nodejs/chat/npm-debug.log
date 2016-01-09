@@ -1,0 +1,427 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'sleep' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of E:\Data\Nodejs\chat\package.json
+5 verbose installManyTop reading scoped package data from E:\Data\Nodejs\chat\node_modules\client-ip\package.json
+6 verbose installManyTop reading scoped package data from E:\Data\Nodejs\chat\node_modules\iplookup\package.json
+7 verbose installManyTop reading scoped package data from E:\Data\Nodejs\chat\node_modules\mysql\package.json
+8 verbose installManyTop reading scoped package data from E:\Data\Nodejs\chat\node_modules\random-js\package.json
+9 verbose installManyTop reading scoped package data from E:\Data\Nodejs\chat\node_modules\socket.io\package.json
+10 info package.json socket.io@1.3.6 No license field.
+11 verbose readDependencies loading dependencies from E:\Data\Nodejs\chat\package.json
+12 silly cache add args [ 'sleep', null ]
+13 verbose cache add spec sleep
+14 silly cache add parsed spec { raw: 'sleep',
+14 silly cache add   scope: null,
+14 silly cache add   name: 'sleep',
+14 silly cache add   rawSpec: '',
+14 silly cache add   spec: '*',
+14 silly cache add   type: 'range' }
+15 silly addNamed sleep@*
+16 verbose addNamed "*" is a valid semver range for sleep
+17 silly addNameRange { name: 'sleep', range: '*', hasData: false }
+18 silly mapToRegistry name sleep
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/sleep
+22 verbose addNameRange registry:https://registry.npmjs.org/sleep not in flight; fetching
+23 verbose request uri https://registry.npmjs.org/sleep
+24 verbose request no auth needed
+25 info attempt registry request try #1 at 2:56:48 PM
+26 verbose request id d7a697eab8cc1d86
+27 verbose etag "2YRY2ZK71X1LQ2I8ZT1G4DZPN"
+28 http request GET https://registry.npmjs.org/sleep
+29 http 304 https://registry.npmjs.org/sleep
+30 silly get cb [ 304,
+30 silly get   { date: 'Thu, 13 Aug 2015 07:56:54 GMT',
+30 silly get     via: '1.1 varnish',
+30 silly get     'cache-control': 'max-age=60',
+30 silly get     etag: '"2YRY2ZK71X1LQ2I8ZT1G4DZPN"',
+30 silly get     age: '0',
+30 silly get     connection: 'keep-alive',
+30 silly get     'x-served-by': 'cache-ams4134-AMS',
+30 silly get     'x-cache': 'HIT',
+30 silly get     'x-cache-hits': '1',
+30 silly get     'x-timer': 'S1439452614.304387,VS0,VE95',
+30 silly get     vary: 'Accept' } ]
+31 verbose etag https://registry.npmjs.org/sleep from cache
+32 verbose get saving sleep to C:\Users\wind\AppData\Roaming\npm-cache\registry.npmjs.org\sleep\.cache.json
+33 silly addNameRange number 2 { name: 'sleep', range: '*', hasData: true }
+34 silly addNameRange versions [ 'sleep',
+34 silly addNameRange   [ '1.0.0',
+34 silly addNameRange     '1.0.1',
+34 silly addNameRange     '1.0.2',
+34 silly addNameRange     '1.1.0',
+34 silly addNameRange     '1.1.1',
+34 silly addNameRange     '1.1.2',
+34 silly addNameRange     '1.1.3',
+34 silly addNameRange     '1.1.4',
+34 silly addNameRange     '1.1.5',
+34 silly addNameRange     '1.1.6',
+34 silly addNameRange     '1.1.7',
+34 silly addNameRange     '1.1.8',
+34 silly addNameRange     '1.2.0',
+34 silly addNameRange     '2.0.0',
+34 silly addNameRange     '3.0.0' ] ]
+35 silly addNamed sleep@3.0.0
+36 verbose addNamed "3.0.0" is a plain semver version for sleep
+37 silly cache afterAdd sleep@3.0.0
+38 verbose afterAdd C:\Users\wind\AppData\Roaming\npm-cache\sleep\3.0.0\package\package.json not in flight; writing
+39 verbose afterAdd C:\Users\wind\AppData\Roaming\npm-cache\sleep\3.0.0\package\package.json written
+40 silly install resolved [ { name: 'sleep',
+40 silly install resolved     version: '3.0.0',
+40 silly install resolved     main: 'index.js',
+40 silly install resolved     description: 'Add sleep() and usleep() to nodejs',
+40 silly install resolved     homepage: 'http://github.com/ErikDubbelboer/node-sleep',
+40 silly install resolved     author: { name: 'Erik Dubbelboer', email: 'erik@dubbelboer.com' },
+40 silly install resolved     engines: { node: '>=0.4.0' },
+40 silly install resolved     keywords: [ 'sleep', 'usleep' ],
+40 silly install resolved     repository:
+40 silly install resolved      { type: 'git',
+40 silly install resolved        url: 'git+https://github.com/ErikDubbelboer/node-sleep.git' },
+40 silly install resolved     dependencies: { nan: '>=2.0.0' },
+40 silly install resolved     gypfile: true,
+40 silly install resolved     scripts: { install: 'node-gyp rebuild' },
+40 silly install resolved     gitHead: 'bebfd6c19cb8c7055d29682446df99088c54bc06',
+40 silly install resolved     bugs: { url: 'https://github.com/ErikDubbelboer/node-sleep/issues' },
+40 silly install resolved     _id: 'sleep@3.0.0',
+40 silly install resolved     _shasum: '6b374727ee43823686db192f34c1fcb5387013ef',
+40 silly install resolved     _from: 'sleep@*',
+40 silly install resolved     _npmVersion: '1.4.28',
+40 silly install resolved     _npmUser: { name: 'erikdubbelboer', email: 'erik@dubbelboer.com' },
+40 silly install resolved     maintainers: [ [Object] ],
+40 silly install resolved     dist:
+40 silly install resolved      { shasum: '6b374727ee43823686db192f34c1fcb5387013ef',
+40 silly install resolved        tarball: 'http://registry.npmjs.org/sleep/-/sleep-3.0.0.tgz' },
+40 silly install resolved     directories: {},
+40 silly install resolved     _resolved: 'https://registry.npmjs.org/sleep/-/sleep-3.0.0.tgz',
+40 silly install resolved     readme: 'ERROR: No README data found!' } ]
+41 info install sleep@3.0.0 into E:\Data\Nodejs\chat
+42 info installOne sleep@3.0.0
+43 verbose installOne of sleep to E:\Data\Nodejs\chat not in flight; installing
+44 verbose lock using C:\Users\wind\AppData\Roaming\npm-cache\_locks\sleep-81949ebeb51c4b9b.lock for E:\Data\Nodejs\chat\node_modules\sleep
+45 silly install write writing sleep 3.0.0 to E:\Data\Nodejs\chat\node_modules\sleep
+46 verbose unbuild node_modules\sleep
+47 silly gentlyRm E:\Data\Nodejs\chat\node_modules\sleep is being purged from base E:\Data\Nodejs\chat
+48 verbose gentlyRm don't care about contents; nuking E:\Data\Nodejs\chat\node_modules\sleep
+49 verbose tar unpack C:\Users\wind\AppData\Roaming\npm-cache\sleep\3.0.0\package.tgz
+50 verbose tar unpacking to E:\Data\Nodejs\chat\node_modules\sleep
+51 silly gentlyRm E:\Data\Nodejs\chat\node_modules\sleep is being purged
+52 verbose gentlyRm don't care about contents; nuking E:\Data\Nodejs\chat\node_modules\sleep
+53 silly gunzTarPerm modes [ '777', '666' ]
+54 silly gunzTarPerm extractEntry package.json
+55 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+56 silly gunzTarPerm extractEntry .npmignore
+57 silly gunzTarPerm modified mode [ '.npmignore', 436, 438 ]
+58 silly gunzTarPerm extractEntry README.md
+59 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+60 silly gunzTarPerm extractEntry index.js
+61 silly gunzTarPerm modified mode [ 'index.js', 436, 438 ]
+62 silly gunzTarPerm extractEntry test.js
+63 silly gunzTarPerm modified mode [ 'test.js', 436, 438 ]
+64 silly gunzTarPerm extractEntry LICENSE.txt
+65 silly gunzTarPerm modified mode [ 'LICENSE.txt', 436, 438 ]
+66 silly gunzTarPerm extractEntry binding.gyp
+67 silly gunzTarPerm modified mode [ 'binding.gyp', 436, 438 ]
+68 silly gunzTarPerm extractEntry sleep.cc
+69 silly gunzTarPerm modified mode [ 'sleep.cc', 436, 438 ]
+70 verbose write writing to E:\Data\Nodejs\chat\node_modules\sleep\package.json
+71 info preinstall sleep@3.0.0
+72 verbose readDependencies loading dependencies from E:\Data\Nodejs\chat\node_modules\sleep\package.json
+73 silly prepareForInstallMany adding nan@>=2.0.0 from sleep dependencies
+74 verbose readDependencies loading dependencies from E:\Data\Nodejs\chat\node_modules\sleep\package.json
+75 silly cache add args [ 'nan@>=2.0.0', null ]
+76 verbose cache add spec nan@>=2.0.0
+77 silly cache add parsed spec { raw: 'nan@>=2.0.0',
+77 silly cache add   scope: null,
+77 silly cache add   name: 'nan',
+77 silly cache add   rawSpec: '>=2.0.0',
+77 silly cache add   spec: '>=2.0.0',
+77 silly cache add   type: 'range' }
+78 silly addNamed nan@>=2.0.0
+79 verbose addNamed ">=2.0.0" is a valid semver range for nan
+80 silly addNameRange { name: 'nan', range: '>=2.0.0', hasData: false }
+81 silly mapToRegistry name nan
+82 silly mapToRegistry using default registry
+83 silly mapToRegistry registry https://registry.npmjs.org/
+84 silly mapToRegistry uri https://registry.npmjs.org/nan
+85 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+86 verbose request uri https://registry.npmjs.org/nan
+87 verbose request no auth needed
+88 info attempt registry request try #1 at 2:56:50 PM
+89 verbose etag "41PIK59ZUA3ADEJCQ281I0TDQ"
+90 http request GET https://registry.npmjs.org/nan
+91 http 304 https://registry.npmjs.org/nan
+92 silly get cb [ 304,
+92 silly get   { date: 'Thu, 13 Aug 2015 07:56:55 GMT',
+92 silly get     via: '1.1 varnish',
+92 silly get     'cache-control': 'max-age=60',
+92 silly get     etag: '"41PIK59ZUA3ADEJCQ281I0TDQ"',
+92 silly get     age: '12',
+92 silly get     connection: 'keep-alive',
+92 silly get     'x-served-by': 'cache-ams4121-AMS',
+92 silly get     'x-cache': 'HIT',
+92 silly get     'x-cache-hits': '1',
+92 silly get     'x-timer': 'S1439452615.727923,VS0,VE0',
+92 silly get     vary: 'Accept' } ]
+93 verbose etag https://registry.npmjs.org/nan from cache
+94 verbose get saving nan to C:\Users\wind\AppData\Roaming\npm-cache\registry.npmjs.org\nan\.cache.json
+95 silly addNameRange number 2 { name: 'nan', range: '>=2.0.0', hasData: true }
+96 silly addNameRange versions [ 'nan',
+96 silly addNameRange   [ '0.3.0-wip',
+96 silly addNameRange     '0.3.0-wip2',
+96 silly addNameRange     '0.3.0',
+96 silly addNameRange     '0.3.1',
+96 silly addNameRange     '0.3.2',
+96 silly addNameRange     '0.4.0',
+96 silly addNameRange     '0.4.1',
+96 silly addNameRange     '0.4.2',
+96 silly addNameRange     '0.4.3',
+96 silly addNameRange     '0.4.4',
+96 silly addNameRange     '0.5.0',
+96 silly addNameRange     '0.5.1',
+96 silly addNameRange     '0.5.2',
+96 silly addNameRange     '0.6.0',
+96 silly addNameRange     '0.7.0',
+96 silly addNameRange     '0.7.1',
+96 silly addNameRange     '0.8.0',
+96 silly addNameRange     '1.0.0',
+96 silly addNameRange     '1.1.0',
+96 silly addNameRange     '1.1.1',
+96 silly addNameRange     '1.1.2',
+96 silly addNameRange     '1.2.0',
+96 silly addNameRange     '1.3.0',
+96 silly addNameRange     '1.4.0',
+96 silly addNameRange     '1.4.1',
+96 silly addNameRange     '1.5.0',
+96 silly addNameRange     '1.4.2',
+96 silly addNameRange     '1.4.3',
+96 silly addNameRange     '1.5.1',
+96 silly addNameRange     '1.5.2',
+96 silly addNameRange     '1.6.0',
+96 silly addNameRange     '1.5.3',
+96 silly addNameRange     '1.6.1',
+96 silly addNameRange     '1.6.2',
+96 silly addNameRange     '1.7.0',
+96 silly addNameRange     '1.8.0',
+96 silly addNameRange     '1.8.1',
+96 silly addNameRange     '1.8.2',
+96 silly addNameRange     '1.8.3',
+96 silly addNameRange     '1.8.4',
+96 silly addNameRange     '1.9.0',
+96 silly addNameRange     '2.0.0',
+96 silly addNameRange     '2.0.1',
+96 silly addNameRange     '2.0.2',
+96 silly addNameRange     '2.0.3',
+96 silly addNameRange     '2.0.4',
+96 silly addNameRange     '2.0.5' ] ]
+97 silly addNamed nan@2.0.5
+98 verbose addNamed "2.0.5" is a plain semver version for nan
+99 silly cache afterAdd nan@2.0.5
+100 verbose afterAdd C:\Users\wind\AppData\Roaming\npm-cache\nan\2.0.5\package\package.json not in flight; writing
+101 verbose afterAdd C:\Users\wind\AppData\Roaming\npm-cache\nan\2.0.5\package\package.json written
+102 silly install resolved [ { name: 'nan',
+102 silly install resolved     version: '2.0.5',
+102 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8->0.12 compatibility',
+102 silly install resolved     main: 'include_dirs.js',
+102 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+102 silly install resolved     scripts:
+102 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+102 silly install resolved        'rebuild-tests': 'pangyp rebuild --msvs_version=2013 --directory test',
+102 silly install resolved        docs: 'doc/.build.sh' },
+102 silly install resolved     contributors:
+102 silly install resolved      [ [Object],
+102 silly install resolved        [Object],
+102 silly install resolved        [Object],
+102 silly install resolved        [Object],
+102 silly install resolved        [Object],
+102 silly install resolved        [Object],
+102 silly install resolved        [Object] ],
+102 silly install resolved     devDependencies:
+102 silly install resolved      { bindings: '~1.2.1',
+102 silly install resolved        'node-gyp': '~2.0.2',
+102 silly install resolved        pangyp: '~2.2.0',
+102 silly install resolved        tap: '~0.7.1',
+102 silly install resolved        xtend: '~4.0.0' },
+102 silly install resolved     license: 'MIT',
+102 silly install resolved     gitHead: 'd13a2e9ce762fd130877b53c71d35963fa2cf689',
+102 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+102 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+102 silly install resolved     _id: 'nan@2.0.5',
+102 silly install resolved     _shasum: '365888014be1fd178db0cbfa258edf7b0cb1c408',
+102 silly install resolved     _from: 'nan@>=2.0.0',
+102 silly install resolved     _npmVersion: '2.13.3',
+102 silly install resolved     _nodeVersion: '3.0.0',
+102 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+102 silly install resolved     maintainers: [ [Object], [Object] ],
+102 silly install resolved     dist:
+102 silly install resolved      { shasum: '365888014be1fd178db0cbfa258edf7b0cb1c408',
+102 silly install resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-2.0.5.tgz' },
+102 silly install resolved     directories: {},
+102 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-2.0.5.tgz',
+102 silly install resolved     readme: 'ERROR: No README data found!' } ]
+103 info install nan@2.0.5 into E:\Data\Nodejs\chat\node_modules\sleep
+104 info installOne nan@2.0.5
+105 verbose installOne of nan to E:\Data\Nodejs\chat\node_modules\sleep not in flight; installing
+106 verbose lock using C:\Users\wind\AppData\Roaming\npm-cache\_locks\nan-34eff2f1692975d3.lock for E:\Data\Nodejs\chat\node_modules\sleep\node_modules\nan
+107 silly install write writing nan 2.0.5 to E:\Data\Nodejs\chat\node_modules\sleep\node_modules\nan
+108 verbose unbuild node_modules\sleep\node_modules\nan
+109 silly gentlyRm E:\Data\Nodejs\chat\node_modules\sleep\node_modules\nan is being purged from base E:\Data\Nodejs\chat
+110 verbose gentlyRm don't care about contents; nuking E:\Data\Nodejs\chat\node_modules\sleep\node_modules\nan
+111 verbose tar unpack C:\Users\wind\AppData\Roaming\npm-cache\nan\2.0.5\package.tgz
+112 verbose tar unpacking to E:\Data\Nodejs\chat\node_modules\sleep\node_modules\nan
+113 silly gentlyRm E:\Data\Nodejs\chat\node_modules\sleep\node_modules\nan is being purged
+114 verbose gentlyRm don't care about contents; nuking E:\Data\Nodejs\chat\node_modules\sleep\node_modules\nan
+115 silly gunzTarPerm modes [ '777', '666' ]
+116 silly gunzTarPerm extractEntry package.json
+117 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+118 silly gunzTarPerm extractEntry README.md
+119 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+120 silly gunzTarPerm extractEntry include_dirs.js
+121 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 438 ]
+122 silly gunzTarPerm extractEntry nan_converters.h
+123 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 438 ]
+124 silly gunzTarPerm extractEntry LICENSE.md
+125 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 438 ]
+126 silly gunzTarPerm extractEntry .dntrc
+127 silly gunzTarPerm modified mode [ '.dntrc', 436, 438 ]
+128 silly gunzTarPerm extractEntry appveyor.yml
+129 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 438 ]
+130 silly gunzTarPerm extractEntry doc/new.md
+131 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 438 ]
+132 silly gunzTarPerm extractEntry doc/.build.sh
+133 silly gunzTarPerm modified mode [ 'doc/.build.sh', 509, 511 ]
+134 silly gunzTarPerm extractEntry doc/buffers.md
+135 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 438 ]
+136 silly gunzTarPerm extractEntry doc/callback.md
+137 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 438 ]
+138 silly gunzTarPerm extractEntry doc/converters.md
+139 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 438 ]
+140 silly gunzTarPerm extractEntry doc/errors.md
+141 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 438 ]
+142 silly gunzTarPerm extractEntry doc/maybe_types.md
+143 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 438 ]
+144 silly gunzTarPerm extractEntry doc/methods.md
+145 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 438 ]
+146 silly gunzTarPerm extractEntry doc/asyncworker.md
+147 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 438 ]
+148 silly gunzTarPerm extractEntry doc/node_misc.md
+149 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 438 ]
+150 silly gunzTarPerm extractEntry doc/persistent.md
+151 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 438 ]
+152 silly gunzTarPerm extractEntry doc/scopes.md
+153 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 438 ]
+154 silly gunzTarPerm extractEntry doc/script.md
+155 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 438 ]
+156 silly gunzTarPerm extractEntry doc/string_bytes.md
+157 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 438 ]
+158 silly gunzTarPerm extractEntry doc/v8_internals.md
+159 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 438 ]
+160 silly gunzTarPerm extractEntry doc/v8_misc.md
+161 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 438 ]
+162 silly gunzTarPerm extractEntry nan.h
+163 silly gunzTarPerm modified mode [ 'nan.h', 436, 438 ]
+164 silly gunzTarPerm extractEntry nan_callbacks.h
+165 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 438 ]
+166 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+167 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 438 ]
+168 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+169 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 438 ]
+170 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+171 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 438 ]
+172 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+173 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 438 ]
+174 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+175 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 438 ]
+176 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+177 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 438 ]
+178 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+179 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 438 ]
+180 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+181 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 438 ]
+182 silly gunzTarPerm extractEntry nan_new.h
+183 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 438 ]
+184 silly gunzTarPerm extractEntry nan_object_wrap.h
+185 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 438 ]
+186 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+187 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 438 ]
+188 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+189 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 438 ]
+190 silly gunzTarPerm extractEntry nan_string_bytes.h
+191 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 438 ]
+192 silly gunzTarPerm extractEntry nan_weak.h
+193 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 438 ]
+194 silly gunzTarPerm extractEntry CHANGELOG.md
+195 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 438 ]
+196 silly gunzTarPerm extractEntry tools/package.json
+197 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 438 ]
+198 silly gunzTarPerm extractEntry tools/README.md
+199 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 438 ]
+200 silly gunzTarPerm extractEntry tools/1to2.js
+201 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 511 ]
+202 verbose write writing to E:\Data\Nodejs\chat\node_modules\sleep\node_modules\nan\package.json
+203 info preinstall nan@2.0.5
+204 verbose readDependencies loading dependencies from E:\Data\Nodejs\chat\node_modules\sleep\node_modules\nan\package.json
+205 verbose readDependencies loading dependencies from E:\Data\Nodejs\chat\node_modules\sleep\node_modules\nan\package.json
+206 silly install resolved []
+207 verbose about to build E:\Data\Nodejs\chat\node_modules\sleep\node_modules\nan
+208 info build E:\Data\Nodejs\chat\node_modules\sleep\node_modules\nan
+209 info linkStuff nan@2.0.5
+210 silly linkStuff nan@2.0.5 has E:\Data\Nodejs\chat\node_modules\sleep\node_modules as its parent node_modules
+211 verbose linkBins nan@2.0.5
+212 verbose linkMans nan@2.0.5
+213 verbose rebuildBundles nan@2.0.5
+214 info install nan@2.0.5
+215 info postinstall nan@2.0.5
+216 verbose unlock done using C:\Users\wind\AppData\Roaming\npm-cache\_locks\nan-34eff2f1692975d3.lock for E:\Data\Nodejs\chat\node_modules\sleep\node_modules\nan
+217 verbose about to build E:\Data\Nodejs\chat\node_modules\sleep
+218 info build E:\Data\Nodejs\chat\node_modules\sleep
+219 info linkStuff sleep@3.0.0
+220 silly linkStuff sleep@3.0.0 has E:\Data\Nodejs\chat\node_modules as its parent node_modules
+221 verbose linkBins sleep@3.0.0
+222 verbose linkMans sleep@3.0.0
+223 verbose rebuildBundles sleep@3.0.0
+224 verbose rebuildBundles [ 'nan' ]
+225 info install sleep@3.0.0
+226 verbose unsafe-perm in lifecycle true
+227 info sleep@3.0.0 Failed to exec install script
+228 verbose unlock done using C:\Users\wind\AppData\Roaming\npm-cache\_locks\sleep-81949ebeb51c4b9b.lock for E:\Data\Nodejs\chat\node_modules\sleep
+229 verbose stack Error: sleep@3.0.0 install: `node-gyp rebuild`
+229 verbose stack Exit status 1
+229 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:213:16)
+229 verbose stack     at EventEmitter.emit (events.js:110:17)
+229 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+229 verbose stack     at ChildProcess.emit (events.js:110:17)
+229 verbose stack     at maybeClose (child_process.js:1015:16)
+229 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+230 verbose pkgid sleep@3.0.0
+231 verbose cwd E:\Data\Nodejs\chat
+232 error Windows_NT 6.1.7601
+233 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "sleep"
+234 error node v0.12.7
+235 error npm  v2.11.3
+236 error code ELIFECYCLE
+237 error sleep@3.0.0 install: `node-gyp rebuild`
+237 error Exit status 1
+238 error Failed at the sleep@3.0.0 install script 'node-gyp rebuild'.
+238 error This is most likely a problem with the sleep package,
+238 error not with npm itself.
+238 error Tell the author that this fails on your system:
+238 error     node-gyp rebuild
+238 error You can get their info via:
+238 error     npm owner ls sleep
+238 error There is likely additional logging output above.
+239 verbose exit [ 1, true ]
+240 verbose unbuild node_modules\sleep
+241 info preuninstall sleep@3.0.0
+242 info uninstall sleep@3.0.0
+243 verbose unbuild rmStuff sleep@3.0.0 from E:\Data\Nodejs\chat\node_modules
+244 info postuninstall sleep@3.0.0
+245 silly gentlyRm E:\Data\Nodejs\chat\node_modules\sleep is being purged from base E:\Data\Nodejs\chat
+246 verbose gentlyRm don't care about contents; nuking E:\Data\Nodejs\chat\node_modules\sleep
+247 silly vacuum-fs purging E:\Data\Nodejs\chat\node_modules\sleep
+248 silly vacuum-fs quitting because other entries in E:\Data\Nodejs\chat\node_modules

@@ -1,0 +1,217 @@
+html{height: 768px;width: 1366px;}
+#strat{height: 150px;padding-bottom: 60px; padding-top: 20px; padding-left: 5px; padding-right: 5px;}
+#strat .it{height: 150px;width: 452px;float: left;text-align: left;}
+#strat img{height: 120px;}    
+#strat .in{height: 150px;width: 452px;text-align: right;float: right ;}
+
+#strat .ma{height: 150px;width: 452px;text-align: center;float: left;}
+body {
+    background: -webkit-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* Chrome 10+, Saf5.1+ */
+    background:    -moz-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* FF3.6+ */
+    background:     -ms-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* IE10 */
+    background:      -o-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* Opera 11.10+ */
+     background:         linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* W3C */
+	font: normal 18px Sniglet; color: white; text-align: center;}
+* {margin: 0; padding: 0;}
+.icode{background: hsl(120, 40%, 40%);height: 97px;top: 0px;margin: 0 auto;}
+h1 {font-weight: normal; font-size: 66px; margin-bottom: 75px;}
+.fun-cube i {transform: scale(10); opacity: 0.1;}
+.fr{background: hsl(120, 40%, 40%);}
+input:focus,textarea:focus { outline: none; }
+form label {display: inline-block;font-size: 1.2em;font-weight: bold;width: 120px;padding: 6px 0;color: #464646;vertical-align: top;}
+.hoi{
+    display: inline-block;
+  padding: 8px 9px;
+  padding-right: 60px;
+  width: 240px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  color: #898989;
+  background-color: #f0f0f0;
+  background-position: 110% center;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+}
+
+.txt {
+  display: inline-block;
+  padding: 8px 9px;
+  padding-right: 60px;
+  width: 240px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  color: #898989;
+  background-color: #f0f0f0;
+  background-position: 110% center;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+ 
+.txtarea {
+  display: inline-block;
+  padding: 8px 11px;
+  padding-right: 30px;
+  width: 480px;
+  height: 120px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  color: #898989;
+  background-color: #f0f0f0;
+  background-position: 110% 4%;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+ 
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.txt:focus, form .txtarea:focus {
+  width: 300px;
+  color: #545454;
+  background-color: #fff;
+  background-position: 110% center;
+  background-repeat: no-repeat;
+  border-color: #059;
+  -webkit-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(70, 100, 200, 0.7);
+  -moz-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(70, 100, 200, 0.7);
+  box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(70, 100, 200, 0.7);
+}
+.txtarea:focus {
+  width: 525px;
+  background-position: 110% 4%;
+}
+ 
+.txt:valid {
+  background-color: #deecda;
+  background-position: 98% center;
+  background-repeat: no-repeat;
+  color: #7d996e;
+  border: 1px solid #95bc7d;
+}
+.txtarea:valid {
+  background-color: #deecda;
+  background-position: 98% 4%;
+  background-repeat: no-repeat;
+  color: #7d996e;
+  border: 1px solid #95bc7d;
+}
+.txt:focus:valid, form .txtarea:focus:valid {
+  -webkit-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(120, 200, 70, 0.7);
+  -moz-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(120, 200, 70, 0.7);
+  box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(120, 200, 70, 0.7); 
+}
+.submitbtn {
+    width: 30px;
+    height: 10px;
+}
+
+#cuboid {
+	width: 900px; margin: 0 auto;
+	/*this also makes #cuboid a container for absolutely positioned descendants*/
+	perspective: 1000px;
+}
+#cuboid section {
+	/*counter translate*/
+	transform: translateZ(-0px);
+	/*propogate 3d space for children*/
+	transform-style: preserve-3d;
+	/*prevent height collapse as children are absolutely positioned*/
+	height: 450px;
+	width: 900px;
+	/*for smooth animations*/
+	transition: all 0.35s;
+}
+#end{
+    height: 450px;
+	background: hsl(120, 40%, 20%);
+    
+}
+
+/*faces*/
+.cuboid-text {
+	/*each face will be 40px high*/
+	height: 450px;
+	background: #fff;
+}
+.cuboid-text table {
+display: auto;
+
+border-collapse: separate;
+border-spacing: 2px;
+border-color: gray;
+}
+table.zebra-style {font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif; text-align:left;margin: auto; margin-bottom:10px;  margin-top: 10px; }
+table.zebra-style th { color: #fff; font-size: 14px; font-weight: normal; padding: 10px 8px; background:#666; }
+table.zebra-style td {color: #777;padding: 8px; font-size:13px;}
+table.zebra-style tr.odd {background:#f2f2f2;}
+.form-text {
+	/*each face will be 40px high*/
+	line-height: 40px; height: 450px;
+	background: hsl(120, 40%, 20%);
+}
+
+.form-text p{
+    margin-left: 60px;
+    margin-bottom: 5px;
+}
+
+.loader {
+	background: hsl(120, 40%, 30%);
+	/*-webkit-animation: phase 1s infinite; */
+}
+/*Lets create a pulsating animation for the loader face*/
+@-webkit-keyframes phase {
+	50% {background: hsl(120, 70%, 30%);}
+}
+
+#submit {display: none;}
+
+.submit-icon, .reset-icon {
+	position: absolute; top: 0; right: 0;
+	color: rgba(0, 0, 0, 0.25);
+	line-height: 40px; padding: 0 10px;
+	/*smooth transitions when user activates input and types something*/
+	transition: all 0.5s;
+	/*to make the icons feel like buttons*/
+	cursor: pointer;
+}
+/*.active = when the user is typing something*/
+.submit-icon.active {color: hsl(120, 40%, 30%);}
+.reset-icon {color: rgba(255, 255, 255, 0.25); font-size: 14px;}
+
+#cuboid div {position: absolute; top: 0; left: 0; width: 100%;}
+/*3D transforms. Each face will be rotated in multiples of -90deg and moved 20px(half of their 40px height) out*/
+#cuboid div:nth-child(1) {transform: rotateX(0deg) translateZ(225px);}
+#cuboid div:nth-child(2) {transform: rotateX(-90deg) translateZ(225px);}
+#cuboid div:nth-child(3) {transform: rotateX(-180deg) translateZ(225px);}
+#cuboid div:nth-child(4) {transform: rotateX(-270deg) translateZ(225px);}
+
+/*the form will have 4 states/classes(default+3) for rotation*/
+#cuboid section.view {transform: translateZ(-20px) rotateX(0deg);}
+#cuboid section.read {transform: translateZ(-20px) rotateX(90deg);}
+#cuboid section.complete {transform: translateZ(-20px) rotateX(180deg);}
+#cuboid section.ende {transform: translateZ(-20px) rotateX(270deg);}
+
+
+
+.warning {
+    border: 1px solid red;
+    padding: 5px;
+    width: 202px;
+    color: red;
+    font-size: 1.4em;
+    display: none;
+}
+
+
+
+
+
+
