@@ -43,3 +43,6 @@ Advisor : Nguyen Quang Hiep (Zera)<br />
 Mobile : 0915122722<br />
 Email : nguyenquanghiep@gmail.com<br />
 </p>
+
+
+[![Join the chat at https://gitter.im/WHTGo/EXP-Training](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WHTGo/EXP-Training?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
